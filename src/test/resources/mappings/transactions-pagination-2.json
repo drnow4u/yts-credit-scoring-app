@@ -1,0 +1,620 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/v1/users/ab9b1013-2cbd-4281-a2b6-fbba0695bc54/transactions",
+    "queryParameters": {
+      "accountIds": {
+        "equalTo": "fca606a4-c91a-4a40-a042-947d61ca1fb4"
+      },
+      "next": {
+        "equalTo": "4d681f0a-35dc-4d57-9ae8-6af49735ceae"
+      },
+      "dateInterval": {
+        "matches": "^P18M/\\d{4}-(((0)[0-9])|((1)[0-2]))-([0-2][0-9]|(3)[0-1])$"
+      }
+    },
+    "headers": {
+      "Authorization": {
+        "equalTo": "Bearer eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIn0..ewRkmEff3GQym6BLEngEsA.mK0ZFEmxcEIwBHieyLfVhhY-O36ziwyv8FSXwaaZ1kT9Xa7m38hhcpAsr9nKl35zHIBxyhDrRVEq49tOuKP7I0scKjsT-3Msux-zLkEuXpeswYR4dD3p6C_dWbLcFtuYo4ir8oN7iNGglG8ujzNXPHIrdO-CuGbhCFU5VLsXB3uHSg3JzpcM9hf9k1HYqC6ajgjp8Ej4v5lCpURbckzNww.efPY1iGBQv9rov1VbSCLxEDJkrbFoFcVMj1gR_LB92w"
+      },
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "transactions" : [
+        {
+          "id": "312b5b1e-e90b-4e23-84e3-459fb6835932",
+          "externalId": "e1cdbc3d-aef9-33f3-aa48-0aeea9285a74",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-07",
+          "timestamp": "2020-12-07T18:47:00Z",
+          "bookingDate": "2020-12-07",
+          "amount": -102.93,
+          "currency": "EUR",
+          "description": "Denplan",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL66INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Personal care",
+            "merchant": {
+              "name": "Denplan"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z",
+          "remittanceInformationStructured":"Vero Moda"
+        },
+        {
+          "id": "01abba53-fb24-45f3-b952-f672931cb16e",
+          "externalId": "fd6462ac-754d-3ae3-af94-6685595337d6",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-06",
+          "timestamp": "2020-12-06T22:54:00Z",
+          "bookingDate": "2020-12-06",
+          "amount": -216.54,
+          "currency": "EUR",
+          "description": "Caffe Concerto",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL70INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Lunch",
+            "merchant": {
+              "name": "Caffe Concerto"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z",
+          "remittanceInformationStructured":"Qatar Airways"
+        },
+        {
+          "id": "4648889d-1098-45ff-aec6-f2b827abbc00",
+          "externalId": "8e59ac2a-efdf-30ac-ba4e-e51f37c576d7",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-06",
+          "timestamp": "2020-12-06T04:53:00Z",
+          "bookingDate": "2020-12-06",
+          "amount": -60.32,
+          "currency": "EUR",
+          "description": "Bershka",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL67INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Shopping",
+            "merchant": {
+              "name": "Bershka"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z",
+          "remittanceInformationStructured":"Qatar Airways 2"
+        },
+        {
+          "id": "955d461f-b059-4e52-ab84-bb318df5230d",
+          "externalId": "0e0474e0-7460-3962-97c3-45e76e51abe7",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-05",
+          "timestamp": "2020-12-05T10:43:00Z",
+          "bookingDate": "2020-12-05",
+          "amount": -131.62,
+          "currency": "EUR",
+          "description": "McDonald's",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL38INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Lunch",
+            "merchant": {
+              "name": "McDonald's"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z",
+          "remittanceInformationStructured":"Qatar Airways 3"
+        },
+        {
+          "id": "f7539d25-6014-4e4f-96b6-f0fc12898cae",
+          "externalId": "d63c66e6-6197-3d5d-a3f0-fe59a83644fe",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-04",
+          "timestamp": "2020-12-04T18:44:00Z",
+          "bookingDate": "2020-12-04",
+          "amount": -51.16,
+          "currency": "EUR",
+          "description": "Economy Energy",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL54INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Utilities",
+            "merchant": {
+              "name": "Economy Energy"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z",
+          "remittanceInformationStructured":"Qatar Airways 4"
+        },
+        {
+          "id": "82899510-b76f-4044-b074-fec8ec218b48",
+          "externalId": "0a6ee277-08c5-3dc2-8e2c-c7bde93cc8a8",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-03",
+          "timestamp": "2020-12-03T13:41:00Z",
+          "bookingDate": "2020-12-03",
+          "amount": -189.97,
+          "currency": "EUR",
+          "description": "Kingdom of Sweets",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL09INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Groceries",
+            "merchant": {
+              "name": "Kingdom of Sweets"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z",
+          "remittanceInformationStructured":"Qatar Airways 5"
+        },
+        {
+          "id": "e580d036-95a5-41ff-a9af-314f2ef62ba1",
+          "externalId": "9d35868e-00ae-393a-bbe5-6884e5e40bde",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-03",
+          "timestamp": "2020-12-03T22:41:00Z",
+          "bookingDate": "2020-12-03",
+          "amount": -16.8,
+          "currency": "EUR",
+          "description": "Old Mutual",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL91INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Investments",
+            "merchant": {
+              "name": "Old Mutual"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z",
+          "remittanceInformationStructured":"Qatar Airways 6"
+        },
+        {
+          "id": "d633cef9-57f2-44ca-b6c6-d1960022d0ca",
+          "externalId": "3012de71-1287-3138-8f83-b645d91244dd",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-02",
+          "timestamp": "2020-12-02T04:26:00Z",
+          "bookingDate": "2020-12-02",
+          "amount": -224.54,
+          "currency": "EUR",
+          "description": "Primark",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL56INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Shopping",
+            "merchant": {
+              "name": "Primark"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z",
+          "remittanceInformationStructured":"Qatar Airways 7"
+        },
+        {
+          "id": "f672a679-d90c-4211-b43f-77c563cc6409",
+          "externalId": "7a6c013c-34e1-387d-9848-7f69122e023a",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-02",
+          "timestamp": "2020-12-02T23:44:00Z",
+          "bookingDate": "2020-12-02",
+          "amount": -93.59,
+          "currency": "EUR",
+          "description": "Premier Stores",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL26INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Groceries",
+            "merchant": {
+              "name": "Premier Stores"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "4a1eb2ac-371f-484f-9026-bf594c82123e",
+          "externalId": "61e60176-8c20-34a5-aa65-9fecc49ea2e8",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-01",
+          "timestamp": "2020-12-01T17:02:00Z",
+          "bookingDate": "2020-12-01",
+          "amount": -95.22,
+          "currency": "EUR",
+          "description": "Budgens",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL55INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Groceries",
+            "merchant": {
+              "name": "Budgens"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "2ce88304-a162-4045-8912-da46aade128b",
+          "externalId": "8239e0af-ca8d-3d45-9827-254c38c918a7",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-11-30",
+          "timestamp": "2020-11-30T06:28:00Z",
+          "bookingDate": "2020-11-30",
+          "amount": -157.29,
+          "currency": "EUR",
+          "description": "giffgaff",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL80INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Bills",
+            "merchant": {
+              "name": "giffgaff"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "50113926-17ed-4182-9fb5-a0a14030d301",
+          "externalId": "5edb05b3-6c43-30e7-9c58-2382e484aa9b",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-11-30",
+          "timestamp": "2020-11-30T20:15:00Z",
+          "bookingDate": "2020-11-30",
+          "amount": -62.51,
+          "currency": "EUR",
+          "description": "Liverpool Victoria",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL31INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Investments",
+            "merchant": {
+              "name": "Liverpool Victoria"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "307b0e3d-a1c8-43b5-8b0d-8d3dd35d4f44",
+          "externalId": "c00a3a9d-45e1-3461-b946-5fcac0fc1c16",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-11-29",
+          "timestamp": "2020-11-29T16:47:00Z",
+          "bookingDate": "2020-11-29",
+          "amount": -47.01,
+          "currency": "EUR",
+          "description": "Abokado",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL24INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Lunch",
+            "merchant": {
+              "name": "Abokado"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "e7ffdd71-0984-4e19-9b13-fbd642d50f6f",
+          "externalId": "b5f89890-a86c-3af5-b517-78a9e5ebe64f",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-11-29",
+          "timestamp": "2020-11-29T05:15:00Z",
+          "bookingDate": "2020-11-29",
+          "amount": -157.58,
+          "currency": "EUR",
+          "description": "Karhoo",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL45INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Expenses",
+            "merchant": {
+              "name": "Karhoo"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "e8317e52-e863-4a4b-b83c-ae4fb510489e",
+          "externalId": "1a2a96e5-0f30-3099-bb90-34348b18d42f",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-11-28",
+          "timestamp": "2020-11-28T15:01:00Z",
+          "bookingDate": "2020-11-28",
+          "amount": -129.38,
+          "currency": "EUR",
+          "description": "British Gas",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL89INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Utilities",
+            "merchant": {
+              "name": "British Gas"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "43e327f6-9b2d-470b-b7b5-ff7f03f3e137",
+          "externalId": "bfa0719d-e5c8-3366-9c77-7365351c3383",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-11-27",
+          "timestamp": "2020-11-27T05:06:00Z",
+          "bookingDate": "2020-11-27",
+          "amount": -39.9,
+          "currency": "EUR",
+          "description": "Go Effortless",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL79INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "General",
+            "merchant": {
+              "name": "Go Effortless"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "6d36043a-df39-49df-b7a4-13ca311c65b0",
+          "externalId": "fb4c31ac-2862-3e69-b38b-67d13de3109b",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-11-27",
+          "timestamp": "2020-11-27T17:51:00Z",
+          "bookingDate": "2020-11-27",
+          "amount": -88.91,
+          "currency": "EUR",
+          "description": "Bella Italia",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL44INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Eating out",
+            "merchant": {
+              "name": "Bella Italia"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "6119ad95-23b6-42de-9fce-433b7cff8553",
+          "externalId": "7b665ff2-2219-3608-8716-96ffdb44fbef",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-11-26",
+          "timestamp": "2020-11-26T04:15:00Z",
+          "bookingDate": "2020-11-26",
+          "amount": -91.59,
+          "currency": "EUR",
+          "description": "UNICEF",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL14INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Charity",
+            "merchant": {
+              "name": "UNICEF"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "82e044b1-c90a-4df1-bb12-04bad87e5941",
+          "externalId": "f1567d96-80c7-378f-98ba-7069ad4e74ca",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-11-25",
+          "timestamp": "2020-11-25T16:27:00Z",
+          "bookingDate": "2020-11-25",
+          "amount": -12.49,
+          "currency": "EUR",
+          "description": "Asics",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL07INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Shopping",
+            "merchant": {
+              "name": "Asics"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "c02e24a5-1066-4e88-a6dd-e92b6fd267e7",
+          "externalId": "a8abed09-7140-3e58-96f3-eaea48dd9938",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-11-25",
+          "timestamp": "2020-11-25T05:30:00Z",
+          "bookingDate": "2020-11-25",
+          "amount": -160.11,
+          "currency": "EUR",
+          "description": "UK Power Networks",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL85INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "General",
+            "merchant": {
+              "name": "UK Power Networks"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "bf9cc6da-12dc-4716-b063-3937bd3b52d8",
+          "externalId": "db5fa27d-b98b-37bd-a137-ff6879e4f50c",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-11-24",
+          "timestamp": "2020-11-24T09:08:00Z",
+          "bookingDate": "2020-11-24",
+          "amount": -163.73,
+          "currency": "EUR",
+          "description": "World Vision",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL37INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Bills",
+            "merchant": {
+              "name": "World Vision"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "4e052b88-fa7a-468b-a323-95c0d790348c",
+          "externalId": "e83d1567-872c-3762-9942-b9adaa540cbc",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-11-23",
+          "timestamp": "2020-11-23T09:32:00Z",
+          "bookingDate": "2020-11-23",
+          "amount": -203.98,
+          "currency": "EUR",
+          "description": "Chelmsford Star Co-op",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL75INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Groceries",
+            "merchant": {
+              "name": "Chelmsford Star Co-op"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "f1e28a09-3e60-4a70-9111-4b604395bf9b",
+          "externalId": "ca6156aa-8d60-347d-9fdb-2435bcd37ba8",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-11-22",
+          "timestamp": "2020-11-22T12:03:00Z",
+          "bookingDate": "2020-11-22",
+          "amount": -6.15,
+          "currency": "EUR",
+          "description": "Aldo",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL42INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Shopping",
+            "merchant": {
+              "name": "Aldo"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "7d2fc869-02e8-4996-8ed9-43c63c9959c9",
+          "externalId": "d841195a-1b14-36c2-aeed-aa4218662391",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-11-21",
+          "timestamp": "2020-11-21T21:21:00Z",
+          "bookingDate": "2020-11-21",
+          "amount": -218.61,
+          "currency": "EUR",
+          "description": "Carphone Warehouse",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL33INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Bills",
+            "merchant": {
+              "name": "Carphone Warehouse"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        }
+      ],
+      "next": null
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

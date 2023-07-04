@@ -1,0 +1,1 @@
+ALTER TABLE client ADD COLUMN site_tags VARCHAR(256);

@@ -1,0 +1,36 @@
+{
+  "extends": ["react-app", "react-app/jest"],
+  "plugins": ["simple-import-sort"],
+  "rules": {
+    "no-console": "error",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "sort-imports": "off",
+    "import/order": "off",
+
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        // The default grouping, but with type imports last as a separate
+        // group, sorting that group like non-type imports are grouped.
+        // Also accounting for our absolute imports
+        "groups": [
+          ["^react$"],
+          ["^@?\\w"],
+          ["^(api|helpers)/"],
+          ["^pages/"],
+          ["^components/"],
+          ["^utils/"],
+          ["^test/"],
+          ["^\\."],
+          ["^@?\\w.*\\u0000$", "^[^.].*\\u0000$", "^\\..*\\u0000$"]
+        ]
+      }
+    ]
+  }
+}

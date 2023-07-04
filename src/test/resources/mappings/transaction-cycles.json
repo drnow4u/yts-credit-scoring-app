@@ -1,0 +1,50 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/v1/users/497f6eca-6276-4993-bfeb-53cbbbba6f08/transaction-cycles",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Bearer eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIn0..ewRkmEff3GQym6BLEngEsA.mK0ZFEmxcEIwBHieyLfVhhY-O36ziwyv8FSXwaaZ1kT9Xa7m38hhcpAsr9nKl35zHIBxyhDrRVEq49tOuKP7I0scKjsT-3Msux-zLkEuXpeswYR4dD3p6C_dWbLcFtuYo4ir8oN7iNGglG8ujzNXPHIrdO-CuGbhCFU5VLsXB3uHSg3JzpcM9hf9k1HYqC6ajgjp8Ej4v5lCpURbckzNww.efPY1iGBQv9rov1VbSCLxEDJkrbFoFcVMj1gR_LB92w"
+      },
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "cycles": [
+        {
+          "amount": 149.17,
+          "counterparty": "Tesco",
+          "currency": "EUR",
+          "cycleId": "157a260e-c937-4b7c-aad0-b3667762d399",
+          "cycleType": "CREDITS",
+          "detected": {},
+          "expired": true,
+          "label": "salary",
+          "period": "P7D",
+          "predictedOccurrences": [],
+          "subscription": true
+        },
+        {
+          "amount": -69.97,
+          "counterparty": "Tesco",
+          "currency": "EUR",
+          "cycleId": "ecd4c298-b918-46d4-afe2-7df5aac410dd",
+          "cycleType": "DEBITS",
+          "detected": {},
+          "expired": true,
+          "label": "salary",
+          "period": "P7D",
+          "predictedOccurrences": [],
+          "subscription": true
+        }
+      ]
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

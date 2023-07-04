@@ -1,0 +1,33 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/v1/users/497f6eca-6276-4993-bfeb-53cbbbba6f08/activities",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Bearer eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIn0..ewRkmEff3GQym6BLEngEsA.mK0ZFEmxcEIwBHieyLfVhhY-O36ziwyv8FSXwaaZ1kT9Xa7m38hhcpAsr9nKl35zHIBxyhDrRVEq49tOuKP7I0scKjsT-3Msux-zLkEuXpeswYR4dD3p6C_dWbLcFtuYo4ir8oN7iNGglG8ujzNXPHIrdO-CuGbhCFU5VLsXB3uHSg3JzpcM9hf9k1HYqC6ajgjp8Ej4v5lCpURbckzNww.efPY1iGBQv9rov1VbSCLxEDJkrbFoFcVMj1gR_LB92w"
+      },
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+        "activities": [
+          {
+            "activityId": "ffa198a7-dc92-4aad-9237-95c0a045091c",
+            "activity": "CREATE_USER_SITE",
+            "startTime": "2021-11-05T17:00:00.000Z",
+            "endTime": "2021-11-05T17:00:10.000Z",
+            "userSites": [
+              "f54380b9-a2c0-4a86-a510-831ae466d52e"
+            ]
+          }
+        ]
+      },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

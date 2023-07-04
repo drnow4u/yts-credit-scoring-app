@@ -1,0 +1,54 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/v1/users/497f6eca-6276-4993-bfeb-53cbbbba6f08/user-sites",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Bearer eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIn0..ewRkmEff3GQym6BLEngEsA.mK0ZFEmxcEIwBHieyLfVhhY-O36ziwyv8FSXwaaZ1kT9Xa7m38hhcpAsr9nKl35zHIBxyhDrRVEq49tOuKP7I0scKjsT-3Msux-zLkEuXpeswYR4dD3p6C_dWbLcFtuYo4ir8oN7iNGglG8ujzNXPHIrdO-CuGbhCFU5VLsXB3uHSg3JzpcM9hf9k1HYqC6ajgjp8Ej4v5lCpURbckzNww.efPY1iGBQv9rov1VbSCLxEDJkrbFoFcVMj1gR_LB92w"
+      },
+      "Content-Type": {
+        "equalTo": "application/json"
+      },
+      "PSU-IP-Address": {
+        "equalTo": "127.0.0.1"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "equalToJson": {
+          "redirectUrl": "http://localhost:3000/yts-credit-scoring-app/site-connect-callback?error=access_denied&state=65d1d5ef-733f-4e55-84be-b8420225b4a2",
+          "loginType": "URL"
+        }
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "activityId": null,
+      "userSiteId": "f54380b9-a2c0-4a86-a510-831ae466d52e",
+      "step": null,
+      "userSite": {
+        "id": "94f8dbbf-04b5-4690-813c-5bb398246b94",
+        "connectionStatus": "DISCONNECTED",
+        "lastDataFetchFailureReason": "AUTHENTICATION_FAILED",
+        "site": {
+          "id": "33aca8b9-281a-4259-8492-1b37706af6db",
+          "name": "Yolt test bank",
+          "supportedAccountTypes": [
+            "CURRENT_ACCOUNT",
+            "CREDIT_CARD",
+            "SAVINGS_ACCOUNT",
+            "PREPAID_ACCOUNT",
+            "PENSION",
+            "INVESTMENT"
+          ]
+        },
+        "consentValidFrom": "2020-12-21T08:27:46.671Z"
+      }
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

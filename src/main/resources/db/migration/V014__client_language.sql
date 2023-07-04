@@ -1,0 +1,1 @@
+ALTER TABLE client ADD COLUMN default_language VARCHAR(2);

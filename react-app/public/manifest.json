@@ -1,0 +1,25 @@
+{
+  "short_name": "Cashflow Analyser",
+  "name": "Yolt Cashflow Analyser App",
+  "icons": [
+    {
+      "src": "favicons/favicon-16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "favicons/Yolt-touch-icon-180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "favicons/Yolt-touch-icon-360.png",
+      "type": "image/png",
+      "sizes": "360x360"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#032e6d",
+  "background_color": "#eceff3"
+}

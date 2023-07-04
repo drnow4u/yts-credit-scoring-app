@@ -1,0 +1,16 @@
+version: '3'
+services:
+  postgres_db:
+    image: postgres:latest
+    container_name: local_postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: yts-credit-scoring-app
+      POSTGRES_USER: yts-apps
+      POSTGRES_PASSWORD: yts-apps
+      PGDATA: /data/postgres
+    volumes:
+      - postgres-yts-credit-scoring-app:/data/postgres/ # persist data even if container shuts down
+volumes:
+  postgres-yts-credit-scoring-app:

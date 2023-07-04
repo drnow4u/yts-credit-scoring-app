@@ -1,0 +1,516 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/v1/users/ab9b1013-2cbd-4281-a2b6-fbba0695bc54/transactions",
+    "queryParameters": {
+      "accountIds": {
+        "equalTo": "fca606a4-c91a-4a40-a042-947d61ca1fb4"
+      },
+      "dateInterval": {
+        "matches": "^P18M/\\d{4}-(((0)[0-9])|((1)[0-2]))-([0-2][0-9]|(3)[0-1])$"
+      }
+    },
+    "headers": {
+      "Authorization": {
+        "equalTo": "Bearer eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIn0..ewRkmEff3GQym6BLEngEsA.mK0ZFEmxcEIwBHieyLfVhhY-O36ziwyv8FSXwaaZ1kT9Xa7m38hhcpAsr9nKl35zHIBxyhDrRVEq49tOuKP7I0scKjsT-3Msux-zLkEuXpeswYR4dD3p6C_dWbLcFtuYo4ir8oN7iNGglG8ujzNXPHIrdO-CuGbhCFU5VLsXB3uHSg3JzpcM9hf9k1HYqC6ajgjp8Ej4v5lCpURbckzNww.efPY1iGBQv9rov1VbSCLxEDJkrbFoFcVMj1gR_LB92w"
+      },
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "transactions": [
+        {
+          "id": "ddf1498c-a747-4c47-ab10-e8087f6aa1f2",
+          "externalId": "ab5305d7-4bcf-3171-ab19-1a08b7627248",
+          "accountId": "109d740d-2932-4916-a62d-22e363e34dc1",
+          "status": "BOOKED",
+          "date": "2020-11-27",
+          "timestamp": "2020-11-27T13:53:00Z",
+          "bookingDate": "2020-11-27",
+          "amount": -1520.01,
+          "currency": "EUR",
+          "description": "Molton Brown",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL48INGB1234567890"
+            }
+          },
+          "exchangeRate": {
+            "currencyFrom": "USD",
+            "currencyTo": "EUR",
+            "rate": 0.9813013732433318
+          },
+          "originalAmount": {
+            "amount": 149.17,
+            "currency": "USD"
+          },
+          "enrichment": {
+            "category": "Shopping",
+            "merchant": {
+              "name": "Molton Brown"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.734Z"
+        },
+        {
+          "id": "c281b4ce-9ffd-4bb6-8e06-26a38d3b13f0",
+          "externalId": "e648d3fa-3229-365e-8eee-57f241fddd6e",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-20",
+          "timestamp": "2020-12-20T12:55:00Z",
+          "bookingDate": "2020-12-20",
+          "amount": -69.97,
+          "currency": "EUR",
+          "description": "Ladbrokes",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL40INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Leisure",
+            "merchant": {
+              "name": "Ladbrokes"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "2414be32-400f-43a0-ba95-839cc059070c",
+          "externalId": "1ba8ebf6-76dc-3026-b793-77f6f53bbebd",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-19",
+          "timestamp": "2020-12-19T12:21:00Z",
+          "bookingDate": "2020-12-19",
+          "amount": -136,
+          "currency": "EUR",
+          "description": "Hachette Partworks",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL85INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Leisure",
+            "merchant": {
+              "name": "Hachette Partworks"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "b6f1eb3e-9acb-4ae8-a2e0-33384262b8c1",
+          "externalId": "f8b78814-fa48-3876-b749-17fce7afdffa",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-18",
+          "timestamp": "2020-12-18T18:35:00Z",
+          "bookingDate": "2020-12-18",
+          "amount": -223.35,
+          "currency": "EUR",
+          "description": "iSupply Gas",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL50INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Utilities",
+            "merchant": {
+              "name": "iSupply"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "d6793209-c710-4713-bf59-acb1722061d1",
+          "externalId": "91d08352-8470-396c-853c-5df13ced2d18",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-18",
+          "timestamp": "2020-12-18T01:38:00Z",
+          "bookingDate": "2020-12-18",
+          "amount": -182.74,
+          "currency": "EUR",
+          "description": "Stradivarius",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL06INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Shopping",
+            "merchant": {
+              "name": "Stradivarius"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "6c8ac4f7-451c-4a29-976a-fbd5bdbddb67",
+          "externalId": "6dfde1fa-85e3-3410-bc26-28686e31a863",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-17",
+          "timestamp": "2020-12-17T12:55:00Z",
+          "bookingDate": "2020-12-17",
+          "amount": -53.65,
+          "currency": "EUR",
+          "description": "Asda",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL23INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Groceries"
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "8c3871fe-3a11-462e-be1f-46e497ee15eb",
+          "externalId": "e49eb361-0fec-36b0-8434-ce7cfa50d113",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-16",
+          "timestamp": "2020-12-16T13:36:00Z",
+          "bookingDate": "2020-12-16",
+          "amount": -184.63,
+          "currency": "EUR",
+          "description": "365online.com",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL40INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Shopping"
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "d1b06d08-8a96-4af4-b1b5-76f0e2167e61",
+          "externalId": "85e885ee-916b-3f04-8857-402bc7bb353a",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-16",
+          "timestamp": "2020-12-16T00:42:00Z",
+          "bookingDate": "2020-12-16",
+          "amount": -135.21,
+          "currency": "EUR",
+          "description": "Harvester",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL87INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Drinks",
+            "merchant": {
+              "name": "Harvester"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "438bf639-bdde-4408-99cb-3c81ede9ee97",
+          "externalId": "ca8367a5-67f1-3692-ba78-bf6db9fbbd2f",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-15",
+          "timestamp": "2020-12-15T14:31:00Z",
+          "bookingDate": "2020-12-15",
+          "amount": -29.25,
+          "currency": "EUR",
+          "description": "Zurich Financial Services",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL63INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Bills",
+            "merchant": {
+              "name": "Zurich Financial Services"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "665f17e1-f8ca-40d0-b5a6-95199b921c8c",
+          "externalId": "30df4e64-6bf4-3320-9531-7cc47d2002fc",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-14",
+          "timestamp": "2020-12-14T10:29:00Z",
+          "bookingDate": "2020-12-14",
+          "amount": -32.81,
+          "currency": "EUR",
+          "description": "Tod's",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL54INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Shopping",
+            "merchant": {
+              "name": "Tod's"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "d951e674-8982-4b8a-aaca-507f49708f8d",
+          "externalId": "4746b722-c7a5-3811-958f-0afd16d58501",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-14",
+          "timestamp": "2020-12-14T23:37:00Z",
+          "bookingDate": "2020-12-14",
+          "amount": -191.75,
+          "currency": "EUR",
+          "description": "Qatar Airways",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL59INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Travel",
+            "merchant": {
+              "name": "Qatar Airways"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "869eaa4a-995e-4efd-928a-8e0d25581481",
+          "externalId": "98052126-440d-38ab-ab78-8d3f1843573c",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-13",
+          "timestamp": "2020-12-13T19:19:00Z",
+          "bookingDate": "2020-12-13",
+          "amount": -44.83,
+          "currency": "EUR",
+          "description": "Vero Moda",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL87INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Shopping",
+            "merchant": {
+              "name": "Vero Moda"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "39d6d90f-0154-4e68-b876-90d0f687eb1e",
+          "externalId": "8a06b5e5-6b2c-396b-b41b-0a7c2048ebc2",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-12",
+          "timestamp": "2020-12-12T11:34:00Z",
+          "bookingDate": "2020-12-12",
+          "amount": -2.1,
+          "currency": "EUR",
+          "description": "Honest Burgers",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL67INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Eating out",
+            "merchant": {
+              "name": "Honest Burgers"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "a621d388-61ea-49a8-9a4a-d893de54b275",
+          "externalId": "8da50094-dce2-38af-a4f0-a463b0f22a0e",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-12",
+          "timestamp": "2020-12-12T01:31:00Z",
+          "bookingDate": "2020-12-12",
+          "amount": -89.69,
+          "currency": "EUR",
+          "description": "Thrifty Car",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL69INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Transport",
+            "merchant": {
+              "name": "Thrifty Car"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "eae07f54-abc3-4802-97ba-acf46772428c",
+          "externalId": "32b98cc7-455e-3d74-8a53-2e6166c1da6c",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-12",
+          "timestamp": "2020-12-12T23:01:00Z",
+          "bookingDate": "2020-12-12",
+          "amount": -40.38,
+          "currency": "EUR",
+          "description": "Fuel Juice",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL26INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Transport",
+            "merchant": {
+              "name": "Fuel Juice"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "025875c9-c22b-4122-8d53-1abdde292eec",
+          "externalId": "9ae30adf-b7a3-3ef2-872a-e11572590bcc",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-11",
+          "timestamp": "2020-12-11T12:02:00Z",
+          "bookingDate": "2020-12-11",
+          "amount": -96.04,
+          "currency": "EUR",
+          "description": "WHSmith",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL64INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Shopping",
+            "merchant": {
+              "name": "WHSmith"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "8b77c9ca-2a43-48d1-9c53-0fb33d062fc7",
+          "externalId": "f5d3895c-b305-3c75-bcdd-ecc00a55b756",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-11",
+          "timestamp": "2020-12-11T02:49:00Z",
+          "bookingDate": "2020-12-11",
+          "amount": -30.68,
+          "currency": "EUR",
+          "description": "Heathrow Express",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL56INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Shopping",
+            "merchant": {
+              "name": "Heathrow Express"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "83586033-c16a-459c-ac8e-41fb75cfe6c4",
+          "externalId": "d1b74449-8fb3-3203-9ee2-83aa22de05a0",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-10",
+          "timestamp": "2020-12-10T02:21:00Z",
+          "bookingDate": "2020-12-10",
+          "amount": -153.62,
+          "currency": "EUR",
+          "description": "Krugers",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL66INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Transport",
+            "merchant": {
+              "name": "Krugers"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "0e686afd-945b-440b-988a-9f25eb82efaa",
+          "externalId": "df4349a3-8922-384c-a381-203a965e49a6",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-09",
+          "timestamp": "2020-12-09T06:20:00Z",
+          "bookingDate": "2020-12-09",
+          "amount": -54.74,
+          "currency": "EUR",
+          "description": "B & Q",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL77INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Housing",
+            "merchant": {
+              "name": "B & Q"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        },
+        {
+          "id": "af857f21-dd5d-410b-9180-118462165a77",
+          "externalId": "267d691e-051a-3268-8500-95b62c5317a3",
+          "accountId": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+          "status": "BOOKED",
+          "date": "2020-12-08",
+          "timestamp": "2020-12-08T11:13:00Z",
+          "bookingDate": "2020-12-08",
+          "amount": -211.36,
+          "currency": "EUR",
+          "description": "Expedia",
+          "creditor": {
+            "accountReferences": {
+              "iban": "NL22INGB1234567890"
+            }
+          },
+          "enrichment": {
+            "category": "Travel",
+            "merchant": {
+              "name": "Expedia"
+            }
+          },
+          "lastUpdatedTime": "2020-12-21T08:57:52.580Z"
+        }
+      ],
+      "next": "4d681f0a-35dc-4d57-9ae8-6af49735ceae"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

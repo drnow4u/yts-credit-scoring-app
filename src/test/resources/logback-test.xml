@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="CONSOLE_LOG_PATTERN" value="%d{HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"/>
+
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <root level="info"/>
+
+    <logger name="com.yolt" level="info"/>
+    <logger name="nl.ing" level="info"/>
+
+    <logger name="WireMock" level="ERROR"/>
+</configuration>

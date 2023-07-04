@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "npmrc": "registry=https://nexus.yolt.io/repository/npm-group/",
+  "packageRules": [
+    {
+      "matchFiles": ["react-app/package.json"],
+      "groupName": "renovate-frontend"
+    }
+  ]
+}

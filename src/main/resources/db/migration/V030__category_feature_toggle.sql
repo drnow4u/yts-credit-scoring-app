@@ -1,0 +1,1 @@
+ALTER TABLE client ADD COLUMN category_feature_toggle BOOLEAN NOT NULL DEFAULT FALSE;

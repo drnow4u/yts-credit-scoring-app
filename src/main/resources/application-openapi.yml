@@ -1,0 +1,9 @@
+springdoc:
+  packages-to-scan: com.yolt.creditscoring.controller.customer
+  api-docs:
+    enabled: true
+  override-with-generic-response: false
+  writer-with-order-by-keys: true
+  model-converters:
+    polymorphic-converter:
+      enabled: false

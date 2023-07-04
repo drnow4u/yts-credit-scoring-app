@@ -1,0 +1,14 @@
+POST {{baseUrl}}/yts-credit-scoring-app/api/admin/login
+Content-Type: application/x-www-form-urlencoded
+
+username={{username}}&password={{password}}
+
+###
+
+GET {{baseUrl}}/yts-credit-scoring-app/api/sites
+
+###
+
+GET {{baseUrl}}/yts-credit-scoring-app/api/admin/logout
+
+###

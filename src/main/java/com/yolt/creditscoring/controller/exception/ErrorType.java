@@ -1,0 +1,18 @@
+package com.yolt.creditscoring.controller.exception;
+
+public enum ErrorType {
+    FLOW_ENDED,
+    BANK_CONNECTION_EXIST,
+    BANK_CONNECTION_FAILURE,
+    BANK_CONSENT_REFUSED,
+    INVITATION_EXPIRED,
+    FEATURE_DISABLED,
+    TOO_MANY_TOKENS,
+    UNKNOWN,
+    CLIENT_EMAIL_NOT_FOUND,
+    USER_NOT_FOUND,
+    INVITE_STILL_PENDING,
+    TOKEN_INVALID,
+    TOKEN_NOT_FOUND,
+    REPORT_NOT_FOUND
+}

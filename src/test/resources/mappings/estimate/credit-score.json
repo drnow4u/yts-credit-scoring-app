@@ -1,0 +1,119 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/credit-score",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Basic dGVzdAo6dGVzdAo="
+      },
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    },
+    "bodyPatterns": [
+      {"matchesJsonPath" : "$.currentBalance.[?(@.unscaledValue == '65229')]"},
+      {"matchesJsonPath" : "$.currentBalance.[?(@.scale == '2')]"},
+      {"matchesJsonPath" : "$.[?(@.transactions size 15)]"},
+
+      {"matchesJsonPath" : "$.transactions[0].[?(@.id empty false)]"},
+      {"matchesJsonPath" : "$.transactions[0].amount.[?(@.unscaledValue == '-15201')]"},
+      {"matchesJsonPath" : "$.transactions[0].amount.[?(@.scale == '2')]"},
+      {"matchesJsonPath" : "$.transactions[0].[?(@.currencyCode == 'EUR')]"},
+      {"matchesJsonPath" : "$.transactions[0].[?(@.dateBooked == '2020-11-27')]"},
+
+      {"matchesJsonPath" : "$.transactions[1].[?(@.id empty false)]"},
+      {"matchesJsonPath" : "$.transactions[1].amount.[?(@.unscaledValue == '-15729')]"},
+      {"matchesJsonPath" : "$.transactions[1].amount.[?(@.scale == '2')]"},
+      {"matchesJsonPath" : "$.transactions[1].[?(@.currencyCode == 'EUR')]"},
+      {"matchesJsonPath" : "$.transactions[1].[?(@.dateBooked == '2020-11-30')]"},
+
+      {"matchesJsonPath" : "$.transactions[2].[?(@.id empty false)]"},
+      {"matchesJsonPath" : "$.transactions[2].amount.[?(@.unscaledValue == '-6251')]"},
+      {"matchesJsonPath" : "$.transactions[2].amount.[?(@.scale == '2')]"},
+      {"matchesJsonPath" : "$.transactions[2].[?(@.currencyCode == 'EUR')]"},
+      {"matchesJsonPath" : "$.transactions[2].[?(@.dateBooked == '2020-11-30')]"},
+
+      {"matchesJsonPath" : "$.transactions[3].[?(@.id empty false)]"},
+      {"matchesJsonPath" : "$.transactions[3].amount.[?(@.unscaledValue == '-4701')]"},
+      {"matchesJsonPath" : "$.transactions[3].amount.[?(@.scale == '2')]"},
+      {"matchesJsonPath" : "$.transactions[3].[?(@.currencyCode == 'EUR')]"},
+      {"matchesJsonPath" : "$.transactions[3].[?(@.dateBooked == '2020-11-29')]"},
+
+      {"matchesJsonPath" : "$.transactions[4].[?(@.id empty false)]"},
+      {"matchesJsonPath" : "$.transactions[4].amount.[?(@.unscaledValue == '-15758')]"},
+      {"matchesJsonPath" : "$.transactions[4].amount.[?(@.scale == '2')]"},
+      {"matchesJsonPath" : "$.transactions[4].[?(@.currencyCode == 'EUR')]"},
+      {"matchesJsonPath" : "$.transactions[4].[?(@.dateBooked == '2020-11-29')]"},
+
+      {"matchesJsonPath" : "$.transactions[5].[?(@.id empty false)]"},
+      {"matchesJsonPath" : "$.transactions[5].amount.[?(@.unscaledValue == '-12938')]"},
+      {"matchesJsonPath" : "$.transactions[5].amount.[?(@.scale == '2')]"},
+      {"matchesJsonPath" : "$.transactions[5].[?(@.currencyCode == 'EUR')]"},
+      {"matchesJsonPath" : "$.transactions[5].[?(@.dateBooked == '2020-11-28')]"},
+
+      {"matchesJsonPath" : "$.transactions[6].[?(@.id empty false)]"},
+      {"matchesJsonPath" : "$.transactions[6].amount.[?(@.unscaledValue == '-399')]"},
+      {"matchesJsonPath" : "$.transactions[6].amount.[?(@.scale == '1')]"},
+      {"matchesJsonPath" : "$.transactions[6].[?(@.currencyCode == 'EUR')]"},
+      {"matchesJsonPath" : "$.transactions[6].[?(@.dateBooked == '2020-11-27')]"},
+
+      {"matchesJsonPath" : "$.transactions[7].[?(@.id empty false)]"},
+      {"matchesJsonPath" : "$.transactions[7].amount.[?(@.unscaledValue == '-8891')]"},
+      {"matchesJsonPath" : "$.transactions[7].amount.[?(@.scale == '2')]"},
+      {"matchesJsonPath" : "$.transactions[7].[?(@.currencyCode == 'EUR')]"},
+      {"matchesJsonPath" : "$.transactions[7].[?(@.dateBooked == '2020-11-27')]"},
+
+      {"matchesJsonPath" : "$.transactions[8].[?(@.id empty false)]"},
+      {"matchesJsonPath" : "$.transactions[8].amount.[?(@.unscaledValue == '-9159')]"},
+      {"matchesJsonPath" : "$.transactions[8].amount.[?(@.scale == '2')]"},
+      {"matchesJsonPath" : "$.transactions[8].[?(@.currencyCode == 'EUR')]"},
+      {"matchesJsonPath" : "$.transactions[8].[?(@.dateBooked == '2020-11-26')]"},
+
+      {"matchesJsonPath" : "$.transactions[9].[?(@.id empty false)]"},
+      {"matchesJsonPath" : "$.transactions[9].amount.[?(@.unscaledValue == '-1249')]"},
+      {"matchesJsonPath" : "$.transactions[9].amount.[?(@.scale == '2')]"},
+      {"matchesJsonPath" : "$.transactions[9].[?(@.currencyCode == 'EUR')]"},
+      {"matchesJsonPath" : "$.transactions[9].[?(@.dateBooked == '2020-11-25')]"},
+
+      {"matchesJsonPath" : "$.transactions[10].[?(@.id empty false)]"},
+      {"matchesJsonPath" : "$.transactions[10].amount.[?(@.unscaledValue == '-16011')]"},
+      {"matchesJsonPath" : "$.transactions[10].amount.[?(@.scale == '2')]"},
+      {"matchesJsonPath" : "$.transactions[10].[?(@.currencyCode == 'EUR')]"},
+      {"matchesJsonPath" : "$.transactions[10].[?(@.dateBooked == '2020-11-25')]"},
+
+      {"matchesJsonPath" : "$.transactions[11].[?(@.id empty false)]"},
+      {"matchesJsonPath" : "$.transactions[11].amount.[?(@.unscaledValue == '-16373')]"},
+      {"matchesJsonPath" : "$.transactions[11].amount.[?(@.scale == '2')]"},
+      {"matchesJsonPath" : "$.transactions[11].[?(@.currencyCode == 'EUR')]"},
+      {"matchesJsonPath" : "$.transactions[11].[?(@.dateBooked == '2020-11-24')]"},
+
+      {"matchesJsonPath" : "$.transactions[12].[?(@.id empty false)]"},
+      {"matchesJsonPath" : "$.transactions[12].amount.[?(@.unscaledValue == '-20398')]"},
+      {"matchesJsonPath" : "$.transactions[12].amount.[?(@.scale == '2')]"},
+      {"matchesJsonPath" : "$.transactions[12].[?(@.currencyCode == 'EUR')]"},
+      {"matchesJsonPath" : "$.transactions[12].[?(@.dateBooked == '2020-11-23')]"},
+
+      {"matchesJsonPath" : "$.transactions[13].[?(@.id empty false)]"},
+      {"matchesJsonPath" : "$.transactions[13].amount.[?(@.unscaledValue == '-615')]"},
+      {"matchesJsonPath" : "$.transactions[13].amount.[?(@.scale == '2')]"},
+      {"matchesJsonPath" : "$.transactions[13].[?(@.currencyCode == 'EUR')]"},
+      {"matchesJsonPath" : "$.transactions[13].[?(@.dateBooked == '2020-11-22')]"},
+
+      {"matchesJsonPath" : "$.transactions[14].[?(@.id empty false)]"},
+      {"matchesJsonPath" : "$.transactions[14].amount.[?(@.unscaledValue == '-21861')]"},
+      {"matchesJsonPath" : "$.transactions[14].amount.[?(@.scale == '2')]"},
+      {"matchesJsonPath" : "$.transactions[14].[?(@.currencyCode == 'EUR')]"},
+      {"matchesJsonPath" : "$.transactions[14].[?(@.dateBooked == '2020-11-21')]"}
+    ]
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "score": 79,
+      "grade": "G"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

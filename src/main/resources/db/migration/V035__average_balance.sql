@@ -1,0 +1,1 @@
+ALTER TABLE credit_score_monthly_report ADD COLUMN average_balance DECIMAL NOT NULL DEFAULT 0;

@@ -1,0 +1,1 @@
+ALTER TABLE client ADD COLUMN api_token_feature_toggle BOOLEAN NOT NULL DEFAULT TRUE;

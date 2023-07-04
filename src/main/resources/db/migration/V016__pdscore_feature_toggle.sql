@@ -1,0 +1,1 @@
+ALTER TABLE client ADD COLUMN pd_score_feature_toggle BOOLEAN NOT NULL DEFAULT false;

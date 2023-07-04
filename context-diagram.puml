@@ -1,0 +1,41 @@
+@startuml
+
+
+node "kubernetes" {
+  component "credit-scoring-ingress" as cfaingress {
+  }
+  component "YTS-credit-scoring-app" as cfa {
+  }
+  note bottom of cfa #lightblue
+  (Acts as a yts-client)
+      <size:10>client-id: </size>
+      <size:10>28d0b528-ae51-4224-8dbd-8603bbc09c20 </size>
+  endnote
+
+  component "YTS" {
+ [ingress]
+ [Client-proxy]
+ [YTS-backend-service]
+ }
+
+
+}
+
+actor "yts-client" as ystclient
+actor "credit-scoring-app-client" as cfaclient
+actor "credit-scoring-app-end-user" as cfauser
+
+
+
+ystclient --> [ingress]
+[ingress] --> [Client-proxy]
+[Client-proxy] --> [YTS-backend-service]
+
+cfaclient --> cfauser : invites
+cfauser -> cfaingress : gives consent
+cfaclient -> cfaingress : checks report
+cfaingress -> cfa
+cfa -> [Client-proxy]
+
+
+@enduml

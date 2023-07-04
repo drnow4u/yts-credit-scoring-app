@@ -1,0 +1,2 @@
+ALTER TABLE client_admin ADD COLUMN auth_provider VARCHAR(256) NOT NULL DEFAULT 'GITHUB';
+ALTER TABLE client_admin ALTER auth_provider DROP DEFAULT;

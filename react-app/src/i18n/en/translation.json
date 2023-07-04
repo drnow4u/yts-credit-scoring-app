@@ -1,0 +1,344 @@
+{
+  "name": "Cashflow Analyser",
+  "loading": "Loading... please wait. This may take several minutes.",
+  "button": {
+    "agree": "Agree",
+    "delete": "Delete",
+    "update": "update",
+    "disagree": "Disagree",
+    "cancel": "Cancel",
+    "send": "Send",
+    "next": "Next",
+    "select": "Select",
+    "logout": "Logout",
+    "save": "Save",
+    "back": "Go back"
+  },
+  "general": {
+    "months": "Months",
+    "categories": "Categories",
+    "balance": "Balance",
+    "averageBalance": "Average Balance",
+    "income": "income",
+    "expenses": "Expenses",
+    "company": "Company",
+    "details": "Details",
+    "email": "Email",
+    "userName": "Name"
+  },
+  "userTable": {
+    "resendInvite": "Re-send invite",
+    "view": "View",
+    "dateInvited": "Date Invited",
+    "invitationStatus": "Status",
+    "adminEmail": "Admin Email"
+  },
+  "invitation": {
+    "inviteUser": "Invite user",
+    "invitationFailed": "Failed to send invite",
+    "invite": "Send invite",
+    "invitationMessageTemplateName": "Invitation template"
+  },
+  "creditReport": {
+    "downloadReport": "Download Report",
+    "details": "Details",
+    "overview": "Dashboard",
+    "monthBalance": "Balance per month",
+    "monthsPeriod": "{{months}} months period",
+    "incoming": "Incoming",
+    "outgoing": "Outgoing",
+    "lastWholeMonths": "Last {{months}} whole months",
+    "generatePdf": "Generate PDF"
+  },
+  "admin": {
+    "reports": "Reports",
+    "settings": "Settings",
+    "users": "Users",
+    "addUser": "Add user",
+    "statistics": "Statistics",
+    "dashboard": "Dashboard"
+  },
+  "settings": {
+    "title": "Settings",
+    "tableTitle": "API Tokens",
+    "AddNewToken": "Add API Token",
+    "newApiToken": "New API Token",
+    "description": "Make sure you copy and save the token as it won't be shown again after you close this dialog.",
+    "revoke": "Revoke",
+    "permissions": {
+      "INVITE_USER": "Invite User",
+      "DOWNLOAD_REPORT": "Download Report",
+      "DELETE_USER": "Delete User"
+    }
+  },
+  "languageSelection": "Offered in",
+  "error": {
+    "occurred": "Error occurred",
+    "flowEnded": "The cashflow overview has ended. If you would like to calculate the report again, please contact your representative for a new invite.",
+    "bankConnectionExist": "Your invitation is already connected to a bank connection. If you would like to start again please contact your representative for a new invite.",
+    "bankConnectionFailure": "We did not receive a consent from the bank. If you did not consent to sharing your data you can close this screen. If you do want to consent to sharing your data please contact your representative.",
+    "bankConsentRefused": "You have not agreed to share your data. If you do want to consent to sharing your data please contact your representative.",
+    "invitationExpired": "Your invitation has expired. If you would like to start again please contact your representative for a new invite.",
+    "unauthorised": "Your session has expired. If you would like to start again please contact your representative for a new invite.",
+    "unknown": "Unknown error",
+    "generic": "Something went wrong. Please try to reload the page or contact your representative, with the provided error code.",
+    "code": "Error code",
+    "reload": "Reload page",
+    "tooManyTokens": "The maximum number of active tokens has been reached."
+  },
+  "consent": {
+    "text": "Do you agree to share data with Yolt and {{clientName}} in order to calculate your cashflow overview?",
+    "termsAndConditions": "Terms and Conditions",
+    "privacyPolicy": "Privacy Policy",
+    "disagreeMessage": "You have not agreed to share your data in accordance with our terms and conditions.",
+    "changeDecision": "Change my decision"
+  },
+  "report": {
+    "processing": "Processing...",
+    "sendOverviewTo": "Send overview",
+    "dataRetrievedOn": "Data retrieved on {{date}}",
+    "generating": {
+      "part1": "Yolt is preparing the cash flow statement",
+      "part2": "The cash flow statement will displayed once we have calculated it.",
+      "part3": "Note: if you close the screen, the request for the cash flow analysis will be stopped."
+    },
+    "title": "Review and submit",
+    "confirmed": "Your cashflow overview will be stored and be shared, you may now close your browser window.",
+    "refused": "Your cashflow overview will not be stored and not be shared, you may now close your browser window.",
+    "refusedRedirect": "Your cashflow overview will not be stored and not be shared, you will be redirected to another site",
+    "confirmedRedirect": "Your cashflow overview will be stored and be shared, you will be redirected to another site",
+    "incomingAndOutgoingPerMonth": "Incoming and outgoing per month",
+    "details": {
+      "creditLimitNotProvided": "Not provided by bank",
+      "ibanNotProvided": "Account number could not be retrieved from Bank",
+      "accountNumber": "Account number",
+      "size": "Number of all transactions",
+      "creditLimit": "Credit limit for account",
+      "dateFrom": "Transactions used from",
+      "dateUntil": "until",
+      "accountHolder": "Account holder",
+      "accountHolderNotProvided": "Not provided by bank",
+      "initialBalance": "Balance at report generation",
+      "retrievedOn": "Data retrieved on"
+    },
+    "pdscore": {
+      "title": "Probability of Overdue Rate",
+      "error": "Probability of Overdue Rate unavailable",
+      "notEnoughAmountError": "Not enough transactions. Please provide six full months of transactions.",
+      "riskClassification": "Risk classification",
+      "expectedRateInfo": "Expected annualized default rate*:",
+      "riskNote": "*Probability of 90 days (or more) past due"
+    },
+    "signatureInfo": {
+      "verified": "Verified, private and secure. SHA-256 verified.",
+      "failed": "Signature verification failed!",
+      "showSignature": "Show signature"
+    },
+    "table": {
+      "year": "Year",
+      "month": "Month",
+      "period": "Period",
+      "highestBalance": "Highest balance",
+      "lowestBalance": "Lowest balance",
+      "totalIncoming": "Total incoming",
+      "totalOutgoing": "Total outgoing",
+      "sizeIncoming": "# incoming transactions",
+      "sizeOutgoing": "# outgoing transactions",
+      "category": "Category",
+      "totalTransactions": "Total transactions",
+      "totalTransactionAmount": "Total transaction amount",
+      "avgTransactionAmount": "Average transaction amount",
+      "totalAmount": "Total Amount",
+      "categoryAggregation": {
+        "loans": "loans",
+        "equityFinancing": "equity financing",
+        "revenue": "revenue",
+        "taxReturns": "tax returns",
+        "otherIncome": "other income",
+        "investments": "investments",
+        "foodAndDrinks": "food and drinks",
+        "vehicleAndDrivingExpenses": "vehicle and driving expenses",
+        "rentAndFacilities": "rent and facilities",
+        "travelExpenses": "travel expenses",
+        "marketingAndPromotion": "marketing and promotion",
+        "otherOperatingCosts": "other operating costs",
+        "utilities": "utilities",
+        "collectionCosts": "collection costs",
+        "salaries": "salaries",
+        "pensionPayments": "pension payments",
+        "corporateSavingsDeposits": "corporate savings deposits",
+        "equityWithdrawal": "equity withdrawal",
+        "salesTax": "sales tax",
+        "payrollTax": "payroll tax",
+        "corporateIncomeTax": "corporate income tax",
+        "unspecifiedTax": "unspecified tax",
+        "otherExpenses": "other expenses"
+      },
+      "categoryGroup": {
+        "financingIncome": "Financing Income",
+        "operationIncome": "Operation Income",
+        "taxIncome": "Tax Income",
+        "uncategorizedIncome": "Uncategorized Income",
+        "financingExpenses": "Financing Expenses",
+        "operatingActivities": "Operating Activities",
+        "corporateSavingsDeposits": "Corporate Savings Deposits",
+        "equityWithdrawal": "Equity Withdrawal",
+        "taxExpenses": "Tax Expenses",
+        "uncategorizedCost": "Uncategorized Cost"
+      },
+      "apiToken": {
+        "name": "Name",
+        "creationDate": "Creation date",
+        "expiryDate": "Expiry date",
+        "lastUsed": "Last used",
+        "status": "Status"
+      }
+    },
+    "signatureVerification": "Signature verification",
+    "signature": "Signature",
+    "overview": {
+      "creditLimitNotProvided": "Not provided by bank",
+      "accountNumber": "Account number",
+      "size": "Total transactions",
+      "creditLimit": "Credit limit",
+      "accountHolder": "Name",
+      "accountHolderNotProvided": "Not provided by bank",
+      "initialBalance": "Balance at report generation",
+      "submitted": "Submitted",
+      "period": "Period",
+      "contact": "Contact",
+      "accountBalanceNotProvided": "Not provided by bank"
+    },
+    "categories": {
+      "REVENUE": "Revenue",
+      "EQUITY_FINANCING": "Equity financing",
+      "LOANS": "Loans",
+      "TAX_RETURNS": "Tax returns",
+      "OTHER_INCOME": "Other incoming cash",
+      "INTEREST_AND_REPAYMENTS": "Interest and repayments",
+      "EQUITY_WITHDRAWAL": "Equity withdrawal",
+      "CORPORATE_SAVINGS_DEPOSITS": "Corporate savings accounts",
+      "INVESTMENTS": "Investments",
+      "RENT_AND_FACILITIES": "Rent and facilities",
+      "VEHICLE_AND_DRIVING_EXPENSES": "Vehicle and driving expenses",
+      "TRAVEL_EXPENSES": "Travel expenses",
+      "FOOD_AND_DRINKS": "Food and drinks",
+      "MARKETING_AND_PROMOTION": "Marketing and promotion",
+      "UTILITIES": "Utilities",
+      "OTHER_OPERATING_COSTS": "Other operating costs",
+      "COLLECTION_COSTS": "Collection costs",
+      "SALARIES": "Salaries",
+      "PENSION_PAYMENTS": "Pensions",
+      "PAYROLL_TAX": "Salary tax",
+      "SALES_TAX": "VAT",
+      "CORPORATE_INCOME_TAX": "Corporate income tax",
+      "UNSPECIFIED_TAX": "Other tax",
+      "OTHER_EXPENSES": "Other outgoing cash"
+    },
+    "card": {
+      "monthlyAverage": "Monthly average",
+      "total": "Total",
+      "recurringIncome": "Recurring income",
+      "recurringOutgoing": "Recurring outgoing",
+      "transactions": "Transactions",
+      "averageAmountPerTransaction": "Average amount per transaction",
+      "vatPayments": "VAT payments",
+      "vatAmountAvg": "VAT amount - avg",
+      "corporateTax": "Corporate tax",
+      "totalTaxReturns": "Tax returns"
+    },
+    "emptyTransactions": {
+      "notGenerededReport": "We could not generate a report",
+      "accountNotEnoughTransactions": "This account has not enough transactions to create a report",
+      "contactCustomer": "Contact your customer to see whether they can provide you with a different account",
+      "buttonBackDashboard": "Back To Dashboard"
+    }
+  },
+  "site": {
+    "select": "Please select your bank",
+    "connecting": "We are connecting to your bank"
+  },
+  "account": {
+    "select": "Please select an account",
+    "accountNumber": "Account number",
+    "balance": "Balance"
+  },
+  "metrics": {
+    "INVITED": "Invited",
+    "EXPIRED": "Expired",
+    "CONSENT_ACCEPTED": "T&C accepted",
+    "CONSENT_REFUSED": "T&C refused",
+    "BANK_CONSENT_ACCEPTED": "Bank consent accepted",
+    "BANK_CONSENT_REFUSED": "Bank consent refused",
+    "REPORT_GENERATED": "Report generated",
+    "REPORT_SAVED": "Report saved",
+    "REPORT_REFUSED": "Report sharing refused",
+    "BANK_ERROR": "Bank error"
+  },
+  "management": {
+    "clients": "Clients list",
+    "accountsList": "Accounts list",
+    "createAccount": "New Account",
+    "createClient": "New client",
+    "clientName": "Name",
+    "clientView": "View",
+    "createFailed": "User create failed",
+    "loadingClient": "Client loading",
+    "reason": "Reason",
+    "ticket": "Ticket",
+    "deleteClient": {
+      "header": "Delete Client",
+      "body": "This action cannot be undone. Be careful."
+    },
+    "deleteAccount": {
+      "header": "Delete Account",
+      "body": "This action cannot be undone. Be careful."
+    },
+    "updateEmail": {
+      "header": "Update Email Client",
+      "body": "This action cannot be undone. Be careful.",
+      "button": "Button text",
+      "htmlPlaceholder": "Please enter HTML code.",
+      "subTitle": "Subtitle",
+      "title": "Title",
+      "buttonPlaceholder": "Open CFA",
+      "templateName": "Template name",
+      "chooseTemplateToUpdate": "Select template to update",
+      "createNewTemplate": "Create new template",
+      "cardTile": "Email templates"
+    },
+    "invitation": {
+      "defaultLanguage": "Default language",
+      "siteTag": "Site tag",
+      "clientName": "Name",
+      "additionalConsentText": "Additional consent text",
+      "additionalReportText": "Additional report text",
+      "redirectUrl": "Redirect URL"
+    },
+    "featureToggle": {
+      "overview": "overview",
+      "months": "months",
+      "categories": "categories",
+      "apiToken": "apiToken",
+      "pDScoreFeature": "pDScoreFeature",
+      "signatureVerification": "signatureVerification"
+    },
+    "email": {
+      "createFailed": "Email template created failed",
+      "editFailed": "Email template edit failed"
+    },
+    "users": {
+      "provider": "Provider",
+      "email": "Email",
+      "userName": "User name",
+      "ticket": "Ticket",
+      "reason": "Reason"
+    },
+    "logo": {
+      "cardTitle": "Logo upload",
+      "filedLogoProcess": "Failed to process image",
+      "filedUpdate": "Failed to update logo",
+      "successUpload": "Logo has been changed"
+    }
+  }
+}

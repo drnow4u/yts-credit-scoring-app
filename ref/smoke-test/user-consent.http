@@ -1,0 +1,24 @@
+POST {{baseUrl}}/yts-credit-scoring-app/api/admin/login
+Content-Type: application/x-www-form-urlencoded
+
+username={{username}}&password={{password}}
+
+
+###
+
+GET {{baseUrl}}/yts-credit-scoring-app/api/user/W6ZfX5i2sBK_z7akH6x4TK1dgbqNORkRu0CpQgslSx37k3mny6-nhrdp3Nfc
+
+###
+
+
+POST {{baseUrl}}/yts-credit-scoring-app/api/user/consent
+Content-Type: application/json
+
+{"userId":"a227adf1-1a47-4d03-b6bd-c65faffe3dbf","consent": true}
+
+
+###
+
+GET {{baseUrl}}/yts-credit-scoring-app/api/admin/logout
+
+###

@@ -1,0 +1,20 @@
+#pdf-container {
+  span {
+    text-overflow: unset;
+    overflow: unset;
+    white-space: unset;
+  }
+  h1,
+  h2,
+  h3 {
+    text-overflow: unset;
+    overflow: unset;
+    white-space: unset;
+  }
+
+  #details-pdf {
+    p {
+      margin: 0px;
+    }
+  }
+}

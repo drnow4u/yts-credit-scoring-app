@@ -1,0 +1,1 @@
+ALTER TABLE credit_score_report ALTER COLUMN signature SET NOT NULL;

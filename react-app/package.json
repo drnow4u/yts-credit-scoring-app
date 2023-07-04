@@ -1,0 +1,105 @@
+{
+  "name": "yts-credit-scoring-app",
+  "version": "0.1.0",
+  "homepage": "/",
+  "private": true,
+  "dependencies": {
+    "@uiw/react-textarea-code-editor": "2.0.3",
+    "@yolt/design-system": "0.0.220",
+    "axios": "0.27.2",
+    "dompurify": "2.4.0",
+    "formik": "2.2.9",
+    "html2canvas": "1.4.1",
+    "i18next": "21.9.2",
+    "jsonpath": "1.1.1",
+    "jspdf": "2.5.1",
+    "jszip": "3.10.1",
+    "lodash": "4.17.21",
+    "luxon": "3.0.3",
+    "query-string": "7.1.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-error-boundary": "3.1.4",
+    "react-i18next": "11.18.6",
+    "react-query": "3.39.2",
+    "react-router-dom": "6.3.0",
+    "react-table": "7.8.0",
+    "recharts": "2.1.14",
+    "validator": "13.7.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "5.5.3",
+    "@testing-library/jest-dom": "5.16.5",
+    "@testing-library/react": "11.2.7",
+    "@testing-library/react-hooks": "7.0.2",
+    "@testing-library/user-event": "12.8.3",
+    "@types/dompurify": "2.3.4",
+    "@types/faker": "5.5.9",
+    "@types/jest": "26.0.24",
+    "@types/jsonpath": "0.2.0",
+    "@types/lodash": "4.14.185",
+    "@types/luxon": "3.0.1",
+    "@types/node": "18.7.18",
+    "@types/react": "17.0.50",
+    "@types/react-dom": "17.0.17",
+    "@types/react-router-dom": "5.3.3",
+    "@types/react-table": "7.7.12",
+    "@types/validator": "13.7.6",
+    "clean-webpack-plugin": "4.0.0",
+    "cross-env": "7.0.3",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-simple-import-sort": "8.0.0",
+    "http-proxy-middleware": "2.0.6",
+    "husky": "6.0.0",
+    "lint-staged": "13.0.3",
+    "mock-local-storage": "1.1.23",
+    "msw": "0.39.2",
+    "prettier": "2.7.1",
+    "react-app-rewired": "2.2.1",
+    "react-scripts": "5.0.1",
+    "sass": "1.54.9",
+    "source-map-explorer": "2.5.2",
+    "typescript": "4.7.4"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,css,scss,md}": [
+      "npm run prettier:write",
+      "npm run lint -- --fix"
+    ]
+  },
+  "scripts": {
+    "prepare": "cd .. && husky install react-app/.husky",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "start": "react-app-rewired start",
+    "start:no-msw": "cross-env REACT_APP_DISABLE_MSW=true react-app-rewired start",
+    "build": "react-app-rewired --max_old_space_size=3072 build",
+    "test:ci": "react-app-rewired test --watchAll=false",
+    "test:coverage": "npm test -- --coverage --watchAll=false",
+    "test:debug": "react-app-rewired --inspect-brk test --runInBand --no-cache",
+    "eject": "react-scripts eject",
+    "typecheck": "tsc",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src --max-warnings=0",
+    "precommit": "lint-staged",
+    "prettier:check": "prettier --check \"{,src/**/}*.{md,json,ts,tsx,css,scss,yml}\"",
+    "prettier:write": "prettier --write \"{,src/**/}*.{md,json,ts,tsx,css,scss,yml}\"",
+    "check-all:ci": "npm run typecheck && npm run lint && npm run prettier:check",
+    "audit": "npm audit --registry=https://registry.npmjs.org",
+    "audit:production": "npm audit --production --registry=https://registry.npmjs.org",
+    "audit:fix": "npm audit fix --registry=https://registry.npmjs.org"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "msw": {
+    "workerDirectory": "public"
+  }
+}

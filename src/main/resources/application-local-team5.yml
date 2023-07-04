@@ -1,0 +1,9 @@
+spring:
+  flyway:
+    enabled: false
+  datasource:
+    url: jdbc:postgresql://rds.team5.yolt.io:5432/yts-credit-scoring-app
+
+yolt:
+  yolt-api:
+    base-url: https://api.sandbox.yolt.io/

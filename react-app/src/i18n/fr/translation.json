@@ -1,0 +1,336 @@
+{
+  "name": "Cashflow Analyser",
+  "loading": "En cours de chargement, veuillez patienter. Cela peut prendre plusieurs minutes.",
+  "button": {
+    "agree": "Accepter",
+    "delete": "Delete",
+    "update": "Mise à jour",
+    "disagree": "Ne pas accepter",
+    "cancel": "Annuler",
+    "send": "Envoyer",
+    "next": "Suivant",
+    "select": "Sélectionner",
+    "logout": "Se déconnecter",
+    "save": "Save",
+    "back": "revenir"
+  },
+  "general": {
+    "months": "Mois",
+    "categories": "Catégories",
+    "balance": "Solde",
+    "averageBalance": "Solde moyen",
+    "income": "Revenus",
+    "expenses": "Dépenses",
+    "category": "Catégorie",
+    "company": "Société",
+    "details": "Détails",
+    "email": "Email",
+    "userName": "Nom"
+  },
+  "userTable": {
+    "resendInvite": "Renvoyer l'invitation",
+    "view": "Voir",
+    "dateInvited": "Date d'invité",
+    "invitationStatus": "la condition",
+    "adminEmail": "Administrateur email"
+  },
+  "invitation": {
+    "inviteUser": "Inviter un utilisateur",
+    "invitationFailed": "Échec de l'envoi de l'invitation",
+    "invite": "Envoyer une invitation",
+    "invitationMessageTemplateName": "Modèle d'invitation"
+  },
+  "creditReport": {
+    "downloadReport": "Télécharger le rapport",
+    "details": "Détails",
+    "overview": "Aperçu",
+    "monthBalance": "Solde par mois",
+    "monthsPeriod": "Période de {{months}} mois",
+    "incoming": "Entrant",
+    "outgoing": "Sortant",
+    "lastWholeMonths": "Derniers {{months}} mois entiers",
+    "generatePdf": "Générer un PDF"
+  },
+  "admin": {
+    "users": "Utilisateurs",
+    "addUser": "Ajouter un utilisateur",
+    "statistics": "Statistiques",
+    "dashboard": "Tableau de bord"
+  },
+  "settings": {
+    "title": "Réglages",
+    "tableTitle": "Jetons d'API",
+    "AddNewToken": "Ajouter un jeton API",
+    "newApiToken": "Nouveau jeton d'API",
+    "description": "Make sure you copy and save the token as it won't be shown again after you close this dialog.",
+    "revoke": "Révoquer",
+    "permissions": {
+      "INVITE_USER": "Inviter un utilisateur",
+      "DOWNLOAD_REPORT": "Télécharger le rapport",
+      "DELETE_USER": "Supprimer un utilisateur"
+    }
+  },
+  "languageSelection": "Offert en",
+  "error": {
+    "occurred": "Une erreur est survenue",
+    "flowEnded": "L'aperçu des flux de trésorerie est terminé. Si vous souhaitez recalculer le rapport, veuillez contacter notre service client pour une nouvelle invitation.",
+    "bankConnectionExist": "Votre invitation est déjà connectée à une connexion bancaire. Si vous souhaitez recommencer, veuillez contacter notre service client pour une nouvelle invitation.",
+    "bankConnectionFailure": "Nous n'avons pas reçu de consentement de la banque. Si vous n'avez pas consenti au partage de vos données, vous pouvez fermer cet écran. Si vous souhaitez consentir au partage de vos données, veuillez contacter notre service client",
+    "bankConsentRefused": "Vous n'avez pas accepté de partager vos données. Si vous souhaitez consentir au partage de vos données, veuillez contacter notre service client",
+    "invitationExpired": "Votre invitation a expiré. Si vous souhaitez recommencer, veuillez contacter notre service client pour une nouvelle invitation.",
+    "unauthorised": "Votre session a expiré. Si vous souhaitez recommencer, veuillez contacter notre service client pour une nouvelle invitation.",
+    "unknown": "Erreur inconnue",
+    "generic": "Une erreur inconnue est arrivée. Veuillez essayer de recharger la page ou contactez votre représentant avec le code d'erreur fourni.",
+    "code": "Code d'erreur",
+    "reload": "Rafraîchir la page",
+    "tooManyTokens": "Le nombre maximum de jetons actifs a été atteint."
+  },
+  "consent": {
+    "text": "Acceptez-vous de partager des données avec Yolt et {{clientName}} afin de calculer votre aperçu des flux de trésorerie ?",
+    "termsAndConditions": "Termes et conditions",
+    "privacyPolicy": "Politique de confidentialité",
+    "disagreeMessage": "Vous n'avez pas accepté de partager vos données conformément à nos termes et conditions.",
+    "changeDecision": "Modifier ma décision"
+  },
+  "report": {
+    "processing": "En cours de traitement...",
+    "sendOverviewTo": "Envoyer l'aperçu",
+    "dataRetrievedOn": "Données récupérées le {{date}}",
+    "generating": {
+      "part1": "Yolt prépare le tableau des flux de trésorerie",
+      "part2": "Le tableau des flux de trésorerie s'affichera une fois que nous l'aurons calculé.",
+      "part3": "Remarque:  si vous fermez l'écran, la demande d'analyse des flux de trésorerie sera arrêtée."
+    },
+    "title": "Réviser et soumettre",
+    "confirmed": "Votre aperçu des flux de trésorerie sera stocké et partagé, vous pouvez maintenant fermer la fenêtre de votre navigateur.",
+    "refused": "Votre aperçu des flux de trésorerie ne sera pas stocké et ne sera pas partagé, vous pouvez maintenant fermer la fenêtre de votre navigateur.",
+    "refusedRedirect": "Votre aperçu des flux de trésorerie ne sera ni stocké ni partagé, vous serez redirigé vers un autre site",
+    "confirmedRedirect": "Votre aperçu des flux de trésorerie sera stocké et partagé, vous serez redirigé vers un autre site",
+    "incomingAndOutgoingPerMonth": "Entrants et sortants par mois",
+    "details": {
+      "creditLimitNotProvided": "Non fourni par la banque",
+      "ibanNotProvided": "Le numéro de compte n'a pas pu être récupéré auprès de la banque",
+      "accountNumber": "Numéro de compte",
+      "size": "Nombre de transactions",
+      "creditLimit": "Limite de crédit du compte",
+      "dateFrom": "Transactions utilisées depuis",
+      "dateUntil": "jusqu'à",
+      "accountHolder": "Titulaire de compte",
+      "accountHolderNotProvided": "Non fourni par la banque",
+      "initialBalance": "Solde à la génération du rapport",
+      "retrievedOn": "Données récupérées sur"
+    },
+    "pdscore": {
+      "title": "Probabilité de taux de retard",
+      "error": "Probabilité de taux de retard indisponible",
+      "notEnoughAmountError": "Pas assez de transactions. Veuillez fournir six mois complets de transactions.",
+      "riskClassification": "Classement des risques",
+      "expectedRateInfo": "Taux de défaut annualisé attendu*:",
+      "riskNote": "*Probabilité de 90 jours (ou plus) de retard de paiement"
+    },
+    "signatureInfo": {
+      "verified": "Vérifié, privé et sécurisé. SHA-256 vérifié.",
+      "failed": "Vérification de signature a échoué!",
+      "showSignature": "Afficher la signature"
+    },
+    "table": {
+      "year": "An",
+      "month": "Mois",
+      "period": "Point final",
+      "highestBalance": "Solde le plus élevé",
+      "lowestBalance": "Solde le plus bas",
+      "totalIncoming": "Entrées totales",
+      "totalOutgoing": "Sorties totales",
+      "sizeIncoming": "# transactions entrantes",
+      "sizeOutgoing": "# transactions sortantes",
+      "category": "Catégorie",
+      "totalTransactions": "Transactions totales",
+      "totalTransactionAmount": "Montant total de la transaction",
+      "avgTransactionAmount": "Montant moyen des transactions",
+      "totalAmount": "Montant total",
+      "categoryAggregation": {
+        "loans": "prêts",
+        "equityFinancing": "financement par actions",
+        "revenue": "revenu",
+        "taxReturns": "déclarations de revenus",
+        "otherIncome": "autre revenu",
+        "investments": "investissements",
+        "foodAndDrinks": "frais de nourriture et boissons",
+        "vehicleAndDrivingExpenses": "frais de véhicule et de conduite",
+        "rentAndFacilities": "frais de loyer et locaux",
+        "travelExpenses": "frais de voyage",
+        "marketingAndPromotion": "frais de marketing et promotion",
+        "otherOperatingCosts": "autres frais de fonctionnement",
+        "utilities": "factures d'énergie",
+        "collectionCosts": "frais de recouvrement",
+        "salaries": "salaires",
+        "pensionPayments": "retraites",
+        "corporateSavingsDeposits": "dépôts d'épargne d'entreprise",
+        "equityWithdrawal": "retrait d'actions",
+        "salesTax": "impôts sur les ventes",
+        "payrollTax": "impôt sur les salaires",
+        "corporateIncomeTax": "impôt sur les sociétés",
+        "unspecifiedTax": "taxe non précisée",
+        "otherExpenses": "autres dépenses"
+      },
+      "categoryGroup": {
+        "financingIncome": "Revenus de financement",
+        "operationIncome": "Revenu d'exploitation",
+        "taxIncome": "Impôt sur le revenu",
+        "uncategorizedIncome": "Revenu non catégorisé",
+        "financingExpenses": "Frais de financement",
+        "operatingActivities": "Activités opérationnelles",
+        "corporateSavingsDeposits": "Dépôts d'épargne d'entreprise",
+        "equityWithdrawal": "Retrait d'actions",
+        "taxExpenses": "Dépenses fiscales",
+        "uncategorizedCost": "Dépense non catégorisée"
+      }
+    },
+    "signatureVerification": "Vérification de la signature",
+    "signature": "Signature",
+    "overview": {
+      "creditLimitNotProvided": "Non fourni par la banque",
+      "accountNumber": "Numéro de compte",
+      "size": "Transactions totales",
+      "creditLimit": "Limite de crédit",
+      "accountHolder": "Nom",
+      "accountHolderNotProvided": "Non fourni par la banque",
+      "initialBalance": "Solde à la génération du rapport",
+      "submitted": "Soumis",
+      "period": "Point final",
+      "contact": "Contact",
+      "accountBalanceNotProvided": "Non fourni par la banque"
+    },
+    "categories": {
+      "REVENUE": "Revenu",
+      "EQUITY_FINANCING": "Financement par actions",
+      "LOANS": "Prêts",
+      "TAX_RETURNS": "Crédit d'impôts",
+      "OTHER_INCOME": "Autres entrées de trésorerie",
+      "INTEREST_AND_REPAYMENTS": "Intérêts et remboursements",
+      "EQUITY_WITHDRAWAL": "Retrait d'actions",
+      "CORPORATE_SAVINGS_DEPOSITS": "Comptes d'épargne d'entreprise",
+      "INVESTMENTS": "Investissements",
+      "RENT_AND_FACILITIES": "Frais de loyer et locaux",
+      "VEHICLE_AND_DRIVING_EXPENSES": "Frais de véhicule et de conduite",
+      "TRAVEL_EXPENSES": "Frais de voyage",
+      "FOOD_AND_DRINKS": "Frais de nourriture et boissons",
+      "MARKETING_AND_PROMOTION": "Frais de marketing et promotion",
+      "UTILITIES": "Frais d'énergie",
+      "OTHER_OPERATING_COSTS": "Autres frais de fonctionnement",
+      "COLLECTION_COSTS": "Frais de recouvrement",
+      "SALARIES": "Salaires",
+      "PENSION_PAYMENTS": "Retraites",
+      "PAYROLL_TAX": "Impôt sur les salaires",
+      "SALES_TAX": "T.V.A.",
+      "CORPORATE_INCOME_TAX": "Impôt sur les sociétés",
+      "UNSPECIFIED_TAX": "Autre taxe",
+      "OTHER_EXPENSES": "Autres sorties de trésorerie"
+    },
+    "card": {
+      "monthlyAverage": "Moyenne mensuelle",
+      "total": "Total",
+      "recurringIncome": "Revenu entrant récurrent",
+      "recurringOutgoing": "Revenu sortant récurrent",
+      "transactions": "Transactions",
+      "averageAmountPerTransaction": "Montant moyen par transaction",
+      "vatPayments": "Paiements de TVA",
+      "vatAmountAvg": "Montant TVA - moy",
+      "corporateTax": "Impôt sur les sociétés",
+      "totalTaxReturns": "Déclarations de revenus"
+    },
+    "emptyTransactions": {
+      "notGenerededReport": "Nous n'avons pas pu générer de rapport",
+      "accountNotEnoughTransactions": "Ce compte n'a pas assez de transactions pour créer un rapport",
+      "contactCustomer": "Contactez votre client pour voir s'il peut vous fournir un autre compte",
+      "buttonBackDashboard": "Retour au tableau de bord"
+    }
+  },
+  "site": {
+    "select": "Veuillez sélectionner votre banque",
+    "connecting": "Nous nous connectons à votre banque"
+  },
+  "account": {
+    "select": "Veuillez sélectionner un compte",
+    "accountNumber": "Numéro de compte",
+    "balance": "Solde"
+  },
+  "metrics": {
+    "INVITED": "Invité",
+    "EXPIRED": "Expiré",
+    "CONSENT_ACCEPTED": "CGV acceptées",
+    "CONSENT_REFUSED": "CGU refusées",
+    "BANK_CONSENT_ACCEPTED": "Consentement bancaire accepté",
+    "BANK_CONSENT_REFUSED": "Consentement bancaire refusé",
+    "REPORT_GENERATED": "Rapport généré",
+    "REPORT_SAVED": "Rapport enregistré",
+    "REPORT_REFUSED": "Partage du rapport refusé",
+    "BANK_ERROR": "Erreur bancaire"
+  },
+  "management": {
+    "clients": "Clients list",
+    "accountsList": "Accounts list",
+    "createAccount": "New Account",
+    "createClient": "New client",
+    "clientName": "Name",
+    "clientView": "View",
+    "createFailed": "User create failed",
+    "loadingClient": "Client loading",
+    "reason": "Reason",
+    "ticket": "Ticket",
+    "deleteClient": {
+      "header": "Delete Client",
+      "body": "This action cannot be undone. Be careful."
+    },
+    "deleteAccount": {
+      "header": "Delete Account",
+      "body": "This action cannot be undone. Be careful."
+    },
+    "updateEmail": {
+      "header": "Update Email Client",
+      "body": "This action cannot be undone. Be careful.",
+      "button": "Button text",
+      "htmlPlaceholder": "Please enter HTML code.",
+      "subTitle": "Subtitle",
+      "title": "Title",
+      "buttonPlaceholder": "Open CFA",
+      "templateName": "Template name",
+      "chooseTemplateToUpdate": "Select template to update",
+      "createNewTemplate": "Create new template",
+      "cardTile": "Email templates"
+    },
+    "invitation": {
+      "defaultLanguage": "Default language",
+      "siteTag": "Site tag",
+      "clientName": "Name",
+      "additionalConsentText": "Additional consent text",
+      "additionalReportText": "Additional report text",
+      "redirectUrl": "Redirect URL"
+    },
+    "featureToggle": {
+      "overview": "overview",
+      "months": "months",
+      "categories": "categories",
+      "apiToken": "apiToken",
+      "pDScoreFeature": "pDScoreFeature",
+      "signatureVerification": "signatureVerification"
+    },
+    "email": {
+      "createFailed": "Email template created failed",
+      "editFailed": "Email template edit failed"
+    },
+    "users": {
+      "provider": "Provider",
+      "email": "Email",
+      "userName": "User name",
+      "ticket": "Ticket",
+      "reason": "Reason"
+    },
+    "logo": {
+      "cardTitle": "Logo upload",
+      "filedUpdate": "Failed to update logo",
+      "filedLogoProcess": "Failed to process image",
+      "successUpload": "Logo has been changed"
+    }
+  }
+}

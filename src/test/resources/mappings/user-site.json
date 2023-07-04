@@ -1,0 +1,52 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/v1/users/497f6eca-6276-4993-bfeb-53cbbbba6f08/user-sites",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Bearer eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIn0..ewRkmEff3GQym6BLEngEsA.mK0ZFEmxcEIwBHieyLfVhhY-O36ziwyv8FSXwaaZ1kT9Xa7m38hhcpAsr9nKl35zHIBxyhDrRVEq49tOuKP7I0scKjsT-3Msux-zLkEuXpeswYR4dD3p6C_dWbLcFtuYo4ir8oN7iNGglG8ujzNXPHIrdO-CuGbhCFU5VLsXB3uHSg3JzpcM9hf9k1HYqC6ajgjp8Ej4v5lCpURbckzNww.efPY1iGBQv9rov1VbSCLxEDJkrbFoFcVMj1gR_LB92w"
+      },
+      "Content-Type": {
+        "equalTo": "application/json"
+      },
+      "PSU-IP-Address": {
+        "equalTo": "127.0.0.1"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "equalToJson": {
+          "redirectUrl": "http://localhost:3000/yts-credit-scoring-app/site-connect-callback?code=eyJhbGciOiJub25lIn0.eyJleHAiOjE2MTU3MTc1MTYsInN1YiI6IkxJR0hUIiwiaWF0IjoxNjA3OTQxNTE2fQ.&state=d94f2229-dc5a-4a16-97c2-ff35af2a8b8c",
+          "loginType": "URL"
+        }
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "activityId": "ffa198a7-dc92-4aad-9237-95c0a045091c",
+      "userSiteId": "f54380b9-a2c0-4a86-a510-831ae466d52e",
+      "userSite": {
+        "id": "f54380b9-a2c0-4a86-a510-831ae466d52e",
+        "connectionStatus": "CONNECTED",
+        "site": {
+          "id": "33aca8b9-281a-4259-8492-1b37706af6db",
+          "name": "Yolt test bank",
+          "supportedAccountTypes": [
+            "CURRENT_ACCOUNT",
+            "CREDIT_CARD",
+            "SAVINGS_ACCOUNT",
+            "PREPAID_ACCOUNT",
+            "PENSION",
+            "INVESTMENT"
+          ]
+        },
+        "consentValidFrom": "2020-12-14T09:39:29.388Z"
+      }
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

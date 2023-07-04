@@ -1,0 +1,1 @@
+ALTER TABLE credit_score_report ADD COLUMN account_holder VARCHAR(256);

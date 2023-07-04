@@ -1,0 +1,1 @@
+ALTER TABLE client_token ADD COLUMN created_admin_email VARCHAR(256) NOT NULL;

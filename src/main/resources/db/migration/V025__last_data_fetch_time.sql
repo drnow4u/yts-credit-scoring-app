@@ -1,0 +1,1 @@
+ALTER TABLE credit_score_report ADD COLUMN last_data_fetch_time TIMESTAMP WITH TIME ZONE;

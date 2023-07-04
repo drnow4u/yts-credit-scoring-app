@@ -1,0 +1,99 @@
+environment: local
+management:
+  server:
+    ssl:
+      enabled: false
+
+credit-scoring:
+  test-admins:
+    microsoftIds:
+      - "test"
+  amazon-ses:
+    enabled: false
+  cookies:
+    https: false
+  invoicing:
+    report-cron: "0 0/5 * * * *"
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/yts-credit-scoring-app
+    username: yts-apps
+    password: yts-apps
+    hikari:
+      max-lifetime: 60000
+      initialization-fail-timeout: 500
+      validation-timeout: 1000
+      connection-timeout: 60000
+      idle-timeout: 120000
+      minimum-idle: 1
+      maximum-pool-size: 3
+      pool-name: "pool-main"
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: "b1c09e860ba9676a954c"
+            clientSecret: "e5781983e580f0307e4ddc1fdda95fd18c115407"
+          google:
+            clientId: not_used_localy
+            clientSecret: not_used_localy
+          microsoft:
+            clientId: not_used_localy
+            clientSecret: not_used_localy
+  flyway:
+    clean-on-validation-error: true
+  sleuth:
+    propagation-keys:
+      - app-client-id
+      - app-user-id
+      - app_version # Initiated by the app, propagated by api-gateway
+      - cbms-profile-id # Initiated by api-gateway
+      - client-id
+      - client-user-id # Initiated by client-gateway
+      - client_user_id
+      - request_trace_id # Initiated by 3rd parties (e.g app), propagated by api-gateway, client-gateway, callbacks
+      - site_id # Initiated by site-management/providers
+      - user-id # Initiated by api-gateway, client-gateway
+      - user_site_id # Initiated by site-management/providers
+    log:
+      slf4j:
+        whitelisted-mdc-keys:
+          - app-client-id
+          - app-user-id
+          - app_version
+          - cbms-profile-id
+          - client-id
+          - client-user-id
+          - client_user_id
+          - request_trace_id
+          - site_id
+          - user-id
+          - user_site_id
+  application:
+    #workaround for YoltPostgreSqlAutoConfiguration as it is setting the role from this value
+    #and we want to have the same configuration for all local development for yts-apps
+    #to not change the rds secrets
+    name: yts-apps
+yolt:
+  vault:
+    secret:
+      enabled: true
+  yolt-api:
+    vault-enabled: false
+    proxy-enabled: false
+    base-url: https://api.ycs.team5.yolt.io
+    client-id: 28d0b528-ae51-4224-8dbd-8603bbc09c20
+    request-token-public-key-id: 30b61184-8372-421b-b5b7-e27ae103ef25
+    redirect-url-id: c0c762d1-de91-45e6-8205-406c9ff9c0ce
+    mtls:
+      enabled: true
+  estimate-api:
+    base-url: https://estimate.azurefd.net
+    proxy-enabled: false
+
+isp:
+  proxy:
+    host: dummy
+    port: 0

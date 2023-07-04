@@ -1,0 +1,343 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+  - url: http://localhost:8080
+    description: Generated server url
+paths:
+  /api/customer/users/invite:
+    post:
+      tags:
+        - customer-api-controller
+      summary: Invite user
+      description: Invite a user. An email will be sent to the provided email. The
+        API returns a user-id that can be used to retrieve the credit score report
+        once it is available.
+      operationId: inviteUserByClientToken
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InviteUserDTO'
+        required: true
+      responses:
+        "200":
+          description: Successful
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/CustomerAPIUserInvitationDTO'
+        "400":
+          description: wrong clientEmailId
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorResponseDTO'
+        "401":
+          description: Unauthorized.
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorResponseDTO'
+      x-expose: external-api
+  /api/customer/v1/users/{creditScoreUserId}:
+    delete:
+      tags:
+        - customer-api-controller
+      summary: Delete user
+      description: Delete a user
+      operationId: deleteUser
+      parameters:
+        - name: creditScoreUserId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        "200":
+          description: Successful
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/CustomerAPIUserInvitationDTO'
+        "401":
+          description: Unauthorized.
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorResponseDTO'
+        "404":
+          description: User (creditScoreUserId) not found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorResponseDTO'
+      x-expose: external-api
+  /api/customer/v1/users/{creditScoreUserId}/report:
+    get:
+      tags:
+        - customer-credit-report-controller
+      summary: Get overview report
+      description: Get all the data of the user in one report.
+      operationId: getAllInOneReportByUserId
+      parameters:
+        - name: creditScoreUserId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        "200":
+          description: Successful
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/AllInOneReport'
+        "401":
+          description: Unauthorized.
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorResponseDTO'
+        "404":
+          description: User (creditScoreUserId) not found
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorResponseDTO'
+      x-expose: external-api
+components:
+  schemas:
+    AllInOneReport:
+      type: object
+      properties:
+        accountDetails:
+          $ref: '#/components/schemas/BankAccountDetailsDTO'
+        categories:
+          type: array
+          items:
+            $ref: '#/components/schemas/SMECategoryDTO'
+        months:
+          type: array
+          items:
+            $ref: '#/components/schemas/MonthlyAdminReportDTO'
+          uniqueItems: true
+        overview:
+          $ref: '#/components/schemas/CreditScoreAdminOverviewResponseDTO'
+        riskClassification:
+          $ref: '#/components/schemas/RiskClassificationDTO'
+        userInvitationStatus:
+          type: string
+          enum:
+            - INVITED
+            - EXPIRED
+            - REFUSED
+            - REFUSED_BANK_CONSENT
+            - ERROR_BANK
+            - ACCOUNT_SELECTED
+            - REPORT_SHARED
+            - REPORT_SHARING_REFUSED
+            - COMPLETED
+            - CALCULATION_ERROR
+    BankAccountDetailsDTO:
+      type: object
+      properties:
+        accountHolder:
+          type: string
+        bban:
+          type: string
+        creditLimit:
+          type: number
+        currency:
+          type: string
+        iban:
+          type: string
+        initialBalance:
+          type: number
+        lastDataFetchTime:
+          type: string
+          format: date-time
+        maskedPan:
+          type: string
+        newestTransactionDate:
+          type: string
+          format: date
+        oldestTransactionDate:
+          type: string
+          format: date
+        sortCodeAccountNumber:
+          type: string
+        transactionsSize:
+          type: integer
+          format: int32
+        userId:
+          type: string
+          format: uuid
+    CreditScoreAdminOverviewResponseDTO:
+      type: object
+      properties:
+        averageIncomeTransactionAmount:
+          type: number
+        averageOutcomeTransactionAmount:
+          type: number
+        averageRecurringCosts:
+          type: number
+        averageRecurringIncome:
+          type: number
+        endDate:
+          type: string
+          format: date
+        incomingTransactionsSize:
+          type: integer
+          format: int32
+        monthlyAverageCost:
+          type: number
+        monthlyAverageIncome:
+          type: number
+        outgoingTransactionsSize:
+          type: integer
+          format: int32
+        startDate:
+          type: string
+          format: date
+        totalCorporateTax:
+          type: number
+        totalIncomeAmount:
+          type: number
+        totalOutgoingAmount:
+          type: number
+        totalTaxReturns:
+          type: number
+        vatAverage:
+          type: number
+        vatTotalPayments:
+          type: integer
+          format: int32
+    CustomerAPIUserInvitationDTO:
+      type: object
+      properties:
+        userId:
+          type: string
+          format: uuid
+    ErrorResponseDTO:
+      type: object
+      properties:
+        errorCode:
+          type: string
+          format: uuid
+        errorType:
+          type: string
+    InviteUserDTO:
+      type: object
+      properties:
+        clientEmailId:
+          type: string
+          format: uuid
+        email:
+          type: string
+        name:
+          type: string
+    MonthlyAdminReportDTO:
+      type: object
+      properties:
+        averageBalance:
+          type: number
+        highestBalance:
+          type: number
+        incomingTransactionsSize:
+          type: integer
+          format: int32
+        lowestBalance:
+          type: number
+        month:
+          type: integer
+          format: int32
+        outgoingTransactionsSize:
+          type: integer
+          format: int32
+        totalIncoming:
+          type: number
+        totalOutgoing:
+          type: number
+        year:
+          type: integer
+          format: int32
+    RiskClassificationDTO:
+      type: object
+      properties:
+        grade:
+          type: string
+          enum:
+            - A
+            - B
+            - C
+            - D
+            - E
+            - F
+            - G
+            - H
+            - I
+            - J
+        rateLower:
+          type: number
+          format: double
+          maximum: 10
+          minimum: 0
+        rateUpper:
+          type: number
+          format: double
+          maximum: 10
+          minimum: 0
+        status:
+          type: string
+          enum:
+            - ERROR
+            - ERROR_NOT_ENOUGH_TRANSACTIONS
+            - COMPLETED
+      required:
+        - status
+    SMECategoryDTO:
+      type: object
+      properties:
+        averageTransactionAmount:
+          type: number
+        categoryName:
+          type: string
+          enum:
+            - LOANS
+            - EQUITY_FINANCING
+            - REVENUE
+            - TAX_RETURNS
+            - OTHER_INCOME
+            - INTEREST_AND_REPAYMENTS
+            - INVESTMENTS
+            - FOOD_AND_DRINKS
+            - VEHICLE_AND_DRIVING_EXPENSES
+            - RENT_AND_FACILITIES
+            - TRAVEL_EXPENSES
+            - MARKETING_AND_PROMOTION
+            - OTHER_OPERATING_COSTS
+            - UTILITIES
+            - COLLECTION_COSTS
+            - SALARIES
+            - PENSION_PAYMENTS
+            - CORPORATE_SAVINGS_DEPOSITS
+            - EQUITY_WITHDRAWAL
+            - SALES_TAX
+            - PAYROLL_TAX
+            - CORPORATE_INCOME_TAX
+            - UNSPECIFIED_TAX
+            - OTHER_EXPENSES
+        categoryType:
+          type: string
+          enum:
+            - INCOMING
+            - OUTGOING
+        totalTransactionAmount:
+          type: number
+        totalTransactions:
+          type: integer
+          format: int32

@@ -1,0 +1,38 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/v1/users/497f6eca-6276-4993-bfeb-53cbbbba6f08/user-sites/061ae378-f773-4625-9796-06e72e1e5a86",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Bearer eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIn0..ewRkmEff3GQym6BLEngEsA.mK0ZFEmxcEIwBHieyLfVhhY-O36ziwyv8FSXwaaZ1kT9Xa7m38hhcpAsr9nKl35zHIBxyhDrRVEq49tOuKP7I0scKjsT-3Msux-zLkEuXpeswYR4dD3p6C_dWbLcFtuYo4ir8oN7iNGglG8ujzNXPHIrdO-CuGbhCFU5VLsXB3uHSg3JzpcM9hf9k1HYqC6ajgjp8Ej4v5lCpURbckzNww.efPY1iGBQv9rov1VbSCLxEDJkrbFoFcVMj1gR_LB92w"
+      },
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "id": "f9d01d50-83e0-41c6-ad71-f1223e83bfc7",
+      "connectionStatus": "CONNECTED",
+      "site": {
+        "id": "33aca8b9-281a-4259-8492-1b37706af6db",
+        "name": "Yolt test bank",
+        "supportedAccountTypes": [
+          "CURRENT_ACCOUNT",
+          "CREDIT_CARD",
+          "SAVINGS_ACCOUNT",
+          "PREPAID_ACCOUNT",
+          "PENSION",
+          "INVESTMENT"
+        ]
+      },
+      "lastDataFetchTime": "2020-12-23T07:43:42.574Z",
+      "consentValidFrom": "2020-12-23T07:43:41.305Z"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

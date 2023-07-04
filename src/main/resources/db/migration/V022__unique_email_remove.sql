@@ -1,0 +1,1 @@
+ALTER TABLE credit_score_user DROP CONSTRAINT credit_score_user_email_client_id_key;

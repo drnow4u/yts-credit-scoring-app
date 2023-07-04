@@ -1,0 +1,102 @@
+spring:
+  main:
+    banner-mode: "off"
+    allow-bean-definition-overriding: true #TODO problem with JsonConfiguration should be fixed
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    flyway:
+      baseline-on-migrate: true
+  security:
+    oauth2:
+      client:
+        provider:
+          microsoft:
+            authorization-uri: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+            token-uri: https://login.microsoftonline.com/common/oauth2/v2.0/token
+            user-info-uri: https://graph.microsoft.com/oidc/userinfo
+            jwk-set-uri: https://login.microsoftonline.com/common/discovery/v2.0/keys
+            user-name-attribute: sub
+        registration:
+          github:
+            clientId: # configured in secrets-pipeline
+            clientSecret: # configured in secrets-pipeline
+            redirectUri: "{baseUrl}/admin/oauth2/callback/{registrationId}"
+            scope:
+              - user:email
+              - read:user
+          google:
+            clientId: # configured in secrets-pipeline
+            clientSecret: # configured in secrets-pipeline
+            redirectUri: "{baseUrl}/admin/oauth2/callback/{registrationId}"
+            scope:
+              - profile
+              - email
+          microsoft:
+            clientId: # configured in secrets-pipeline
+            clientSecret: # configured in secrets-pipeline
+            redirectUri: "{baseUrl}/admin/oauth2/callback/{registrationId}"
+            authorization-grant-type: authorization_code
+            scope:
+              - openid
+              - profile
+              - email
+  data:
+    web:
+      pageable:
+        max-page-size: 100
+credit-scoring:
+  amazon-ses:
+    enabled: true
+  trust-store-location: certificates/truststore.p12
+  trust-store-password: changeit
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  forward-headers-strategy: native
+logging:
+  level:
+    ROOT: INFO
+info:
+  appName: yts-credit-scoring-app
+  appVersion: 0.0.1
+management:
+  server:
+    port: 8444
+    ssl:
+      enabled: true
+      key-store: /vault/secrets/keystore.p12
+      key-alias: keystore
+      key-store-password: dontchangeit
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: info, health, metrics, prometheus
+  endpoint:
+    health:
+      group:
+        readiness:
+          include: readinessState, db
+yolt:
+  commons:
+    error-handling:
+      prefix: CSA
+  vault:
+    enabled: true
+    aws:
+      enabled: true
+    secret:
+      enabled: true
+  yolt-api:
+    jvm-truststore: true
+    proxy-enabled: false
+    base-url: https://client-proxy
+    mtls:
+      enabled: false
+    one-off-ais-user: true
+  estimate-api:
+    base-url: https://app.estimate.ing-labs.com
+    proxy-enabled: true

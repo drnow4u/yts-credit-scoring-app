@@ -1,0 +1,307 @@
+{
+  "name": "Cashflow Analyser",
+  "loading": "Aan het laden… even geduld. Dit kan enkele minuten duren.",
+  "button": {
+    "agree": "Akkoord",
+    "delete": "Delete",
+    "update": "update",
+    "disagree": "Niet akkoord",
+    "cancel": "Annuleren",
+    "send": "Versturen",
+    "next": "Volgende",
+    "select": "Selecteren",
+    "logout": "Uitloggen",
+    "save": "Save",
+    "back": "Ga terug"
+  },
+  "general": {
+    "months": "Maanden",
+    "categories": "Categorieën",
+    "balance": "Saldo",
+    "averageBalance": "Average Balance",
+    "income": "inkomsten",
+    "expenses": "uitgaven",
+    "category": "Categorie",
+    "company": "Company",
+    "details": "Details",
+    "email": "Email",
+    "userName": "Naam"
+  },
+  "userTable": {
+    "resendInvite": "Uitnodiging opnieuw versturen",
+    "view": "Bekijken",
+    "dateInvited": "Datum uitgenodigd",
+    "invitationStatus": "Status",
+    "adminEmail": "E-mail beheerder"
+  },
+  "invitation": {
+    "inviteUser": "Gebruiker uitnodigen",
+    "invitationFailed": "Kan uitnodiging niet verzenden",
+    "invite": "Uitnodiging sturen",
+    "invitationMessageTemplateName": "Uitnodigingssjabloon"
+  },
+  "languageSelection": "Aangeboden in",
+  "error": {
+    "occurred": "Fout opgetreden",
+    "flowEnded": "De kasstroom analyse is gestopt. Als u deze opnieuw wilt starten, neem dan contact op met uw contactpersoon voor een nieuwe uitnodiging.",
+    "bankConnectionExist": "Uw uitnodiging is al verbonden aan deze bank rekening. Als u opnieuw de kasstroom analyse wilt starten voor een andere bankrekening, neem dan contact op met uw contactpersoon voor een nieuwe uitnodiging.",
+    "bankConnectionFailure": "We hebben geen PSD2 -toestemming van de bank ontvangen. Als u geen toestemming heeft gegeven voor het delen van de transactiegegevens, kunt u het scherm sluiten. Indien u alsnog toestemming voor het koppelen van uw bankrekening wilt geven, neem dan contact op met uw contactpersoon voor een nieuwe uitnodiging.",
+    "bankConsentRefused": "Je hebt ervoor gekozen om je bankgegevens niet te delen. Dit scherm kan gesloten worden. Wil je wel je bankgegevens alsnog delen, neem dan contact op met je contactpersoon voor een nieuwe uitnodiging.",
+    "invitationExpired": "Uw uitnodiging voor het delen van uw bankrekening is verlopen. Als u opnieuw wilt beginnen, neem dan contact op met uw contactpersoon voor een nieuwe uitnodiging.",
+    "unauthorised": "Uw uitnodiging voor het delen van uw bankrekening is verlopen. Als u opnieuw wilt beginnen, neem dan contact op met uw contactpersoon voor een nieuwe uitnodiging.",
+    "unknown": "Onbekende fout",
+    "generic": "Er is iets fout gegaan. Probeer de pagina opnieuw te laden of neem contact op met uw contactpersoon met de verstrekte foutcode",
+    "code": "Foutcode",
+    "reload": "Pagina herladen",
+    "tooManyTokens": "Het maximum aantal actieve tokens is bereikt."
+  },
+  "creditReport": {
+    "downloadReport": "Rapport Downloaden",
+    "details": "Details",
+    "overview": "Dashboard",
+    "monthBalance": "Saldo per maand",
+    "monthsPeriod": "Laatste {{months}} gehele maanden",
+    "incoming": "Inkomend",
+    "outgoing": "Uitgaand",
+    "lastWholeMonths": "Laatste {{months}} gehele maanden",
+    "generatePdf": "PDF genereren"
+  },
+  "admin": {
+    "reports": "Rapporten",
+    "settings": "Instellingen",
+    "users": "Gebruiker",
+    "addUser": "Invite",
+    "statistics": "Statistieken",
+    "dashboard": "Statusoverzicht"
+  },
+  "settings": {
+    "title": "Settings",
+    "tableTitle": "tokens",
+    "AddNewToken": "API-token toevoegen",
+    "newApiToken": "Nieuw API-token",
+    "description": "Zorg ervoor dat u het token kopieert en opslaat, aangezien het niet opnieuw wordt weergegeven nadat u dit dialoogvenster hebt gesloten.",
+    "revoke": "Herroepen",
+    "permissions": {
+      "INVITE_USER": "Gebruiker uitnodigen",
+      "DOWNLOAD_REPORT": "Rapport downloaden",
+      "DELETE_USER": "Gebruiker verwijderen"
+    }
+  },
+  "consent": {
+    "text": "Ik ga akkoord met het delen van mijn bankrekening gegevens met Yolt voor het maken van het kasstroom overzicht.",
+    "termsAndConditions": "Voorwaarden",
+    "privacyPolicy": "Privacy Beleid",
+    "disagreeMessage": "U bent niet akkoord gegaan met het delen van uw bankrekening gegevens met Yolt voor het maken van het kasstroom overzicht.",
+    "changeDecision": "Verander mijn keuze"
+  },
+  "report": {
+    "processing": "Verwerken...",
+    "sendOverviewTo": "Overzicht verzenden",
+    "dataRetrievedOn": "gegevens opgehaald op {{date}}",
+    "generating": {
+      "part1": "Yolt is het kasstroom overzicht aan het opstellen",
+      "part2": "Het kasstroom overzicht wordt weergegeven zodra we deze hebben berekend.",
+      "part3": "Let op: als u het scherm sluit wordt de aanvraag voor de kasstroom analyse gestopt."
+    },
+    "title": "Uw kasstroom overzicht",
+    "confirmed": "Uw kasstroom overzicht is gedeeld. De opgehaalde bankrekening gegevens zijn door ons verwijderd. U kunt deze pagina sluiten.",
+    "refused": "Uw kasstroom overzicht wordt niet opgeslagen en niet gedeeld. De opgehaalde bankrekening gegevens zijn door ons verwijderd. U kunt deze pagina sluiten.",
+    "refusedRedirect": "Uw kasstroom overzicht wordt niet opgeslagen en niet gedeeld, u wordt doorgestuurd naar een andere site",
+    "confirmedRedirect": "Uw kasstroom overzicht wordt opgeslagen en gedeeld, u wordt doorgestuurd naar een andere site",
+    "incomingAndOutgoingPerMonth": "Inkomend en uitgaand per maand",
+    "details": {
+      "creditLimitNotProvided": "niet opgegeven door de bank",
+      "ibanNotProvided": "het rekeningnummer is niet gedeeld door de bank",
+      "accountNumber": "Rekeningnummer",
+      "size": "Aantal transacties in de periode",
+      "creditLimit": "Kredietlimiet op de rekening",
+      "dateFrom": "Transacties gebruikt van",
+      "dateUntil": "t/m",
+      "accountHolder": "Rekeninghouder",
+      "accountHolderNotProvided": "niet opgegeven door de bank",
+      "initialBalance": "Banksaldo bij maken rapport",
+      "retrievedOn": "Gegevens opgehaald op"
+    },
+    "pdscore": {
+      "title": "Kans op wanbetaling",
+      "error": "Kans op wanbetaling niet beschikbaar",
+      "notEnoughAmountError": "Niet genoeg transacties. Geef zes volledige maanden aan transacties op.",
+      "riskClassification": "Risicoclassificatie",
+      "expectedRateInfo": "Verwacht wanbetalingspercentage op jaarbasis*:",
+      "riskNote": "*Waarschijnlijkheid van 90 dagen (of meer) achterstallig"
+    },
+    "signatureInfo": {
+      "verified": "Geverifieerd, privé en veilig. SHA-256 geverifieerd.",
+      "failed": "Verificatie handtekening mislukt!",
+      "showSignature": "Toon handtekening"
+    },
+    "table": {
+      "year": "Jaar",
+      "month": "Maand",
+      "period": "Periode",
+      "highestBalance": "Hoogste saldo",
+      "lowestBalance": "Laagste saldo",
+      "totalIncoming": "Totaal inkomend",
+      "totalOutgoing": "Totaal uitgaand",
+      "sizeIncoming": "# inkomende transacties",
+      "sizeOutgoing": "# uitgaande transacties",
+      "category": "Categorie",
+      "totalTransactions": "Totaal aantal transacties",
+      "totalTransactionAmount": "Totaal transactiebedrag",
+      "avgTransactionAmount": "Gemiddeld transactiebedrag",
+      "totalAmount": "Totaalbedrag",
+      "categoryAggregation": {
+        "loans": "Leningen",
+        "equityFinancing": "Storting eigen vermogen",
+        "revenue": "Omzet",
+        "taxReturns": "Belastingteruggave",
+        "otherIncome": "Andere inkomsten",
+        "investments": "Investeringen",
+        "foodAndDrinks": "Eten en drinken",
+        "vehicleAndDrivingExpenses": "Auto- en rijkosten",
+        "rentAndFacilities": "Huur en faciliteiten",
+        "travelExpenses": "Reiskosten",
+        "marketingAndPromotion": "Marketing en promotie",
+        "otherOperatingCosts": "Overige operationele kosten",
+        "utilities": "Energie en telecom",
+        "collectionCosts": "Betalingen aan incassobureau",
+        "salaries": "Salarissen",
+        "pensionPayments": "Pensioenen",
+        "corporateSavingsDeposits": "corporate savings deposits",
+        "equityWithdrawal": "Opname eigenaar",
+        "salesTax": "BTW",
+        "payrollTax": "Loonbelasting",
+        "corporateIncomeTax": "Vennootschapsbelasting",
+        "unspecifiedTax": "Overige belasting",
+        "otherExpenses": "Overige uitgaven"
+      },
+      "categoryGroup": {
+        "financingIncome": "Financing Income",
+        "operationIncome": "Operation Income",
+        "taxIncome": "Tax Income",
+        "uncategorizedIncome": "Uncategorized Income",
+        "financingExpenses": "Financing Expenses",
+        "operatingActivities": "Operating Activities",
+        "corporateSavingsDeposits": "Zakelijke spaarrekening",
+        "equityWithdrawal": "Equity Withdrawal",
+        "taxExpenses": "Tax Expenses",
+        "uncategorizedCost": "Uncategorized Cost"
+      },
+      "apiToken": {
+        "name": "Name",
+        "creationDate": "Creation date",
+        "expiryDate": "Expiry date",
+        "lastUsed": "Last used",
+        "status": "Status"
+      }
+    },
+    "signatureVerification": "Handtekeningverifiëring",
+    "signature": "Handtekening",
+    "card": {
+      "monthlyAverage": "Maandelijks gemiddelde",
+      "total": "Totaal",
+      "recurringIncome": "Maandelijkse vaste inkomsten",
+      "recurringOutgoing": "Maandelijks terugkerende uitgaven",
+      "transactions": "Transacties",
+      "averageAmountPerTransaction": "Gemiddelde bedrag per transactie",
+      "vatPayments": "BTW betalingen",
+      "vatAmountAvg": "BTW bedrag – gemiddeld",
+      "corporateTax": "Vennootschapsbelasting",
+      "totalTaxReturns": "Belastingteruggave"
+    },
+    "overview": {
+      "creditLimitNotProvided": "Niet opgegeven door de bank",
+      "accountBalanceNotProvided": "Niet opgegeven door de bank",
+      "creditLimit": "Kredietlimiet",
+      "accountHolder": "Naam",
+      "accountHolderNotProvided": "Niet opgegeven door de bank",
+      "submitted": "Ingediend",
+      "initialBalance": "Banksaldo bij maken rapport",
+      "size": "Aantal Transacties",
+      "accountNumber": "IBAN",
+      "period": "Periode",
+      "contact": "Contact"
+    },
+    "emptyTransactions": {
+      "notGenerededReport": "We kunnen geen rapport genereren",
+      "accountNotEnoughTransactions": "Deze rekening heeft niet genoeg transacties om een ​​rapport te maken",
+      "contactCustomer": "Neem contact op met uw klant om te zien of zij u een ander account kunnen geven",
+      "buttonBackDashboard": "Terug naar dashboard"
+    }
+  },
+  "site": {
+    "select": "Selecteer uw bank",
+    "connecting": "Er wordt verbinding gemaakt met de bank"
+  },
+  "account": {
+    "select": "Selecteer de juiste rekening voor het kasstroom overzicht",
+    "accountNumber": "Rekeningnummer",
+    "balance": "Saldo"
+  },
+  "management": {
+    "clients": "Clients list",
+    "accountsList": "Accounts list",
+    "createAccount": "New Account",
+    "createClient": "New client",
+    "clientName": "Name",
+    "clientView": "View",
+    "createFailed": "User create failed",
+    "loadingClient": "Client loading",
+    "reason": "Reason",
+    "ticket": "Ticket",
+    "deleteClient": {
+      "header": "Delete Client",
+      "body": "This action cannot be undone. Be careful."
+    },
+    "deleteAccount": {
+      "header": "Delete Account",
+      "body": "This action cannot be undone. Be careful."
+    },
+    "updateEmail": {
+      "header": "Update Email Client",
+      "body": "This action cannot be undone. Be careful.",
+      "button": "Button text",
+      "htmlPlaceholder": "Please enter HTML code.",
+      "subTitle": "Subtitle",
+      "title": "Title",
+      "buttonPlaceholder": "Open CFA",
+      "templateName": "Template name",
+      "chooseTemplateToUpdate": "Select template to update",
+      "createNewTemplate": "Create new template",
+      "cardTile": "Email templates"
+    },
+    "invitation": {
+      "defaultLanguage": "Default language",
+      "siteTag": "Site tag",
+      "clientName": "Name",
+      "additionalConsentText": "Additional consent text",
+      "additionalReportText": "Additional report text",
+      "redirectUrl": "Redirect URL"
+    },
+    "featureToggle": {
+      "overview": "overview",
+      "months": "months",
+      "categories": "categories",
+      "apiToken": "apiToken",
+      "pDScoreFeature": "pDScoreFeature",
+      "signatureVerification": "signatureVerification"
+    },
+    "email": {
+      "createFailed": "Email template created failed",
+      "editFailed": "Email template edit failed"
+    },
+    "users": {
+      "provider": "Provider",
+      "email": "Email",
+      "userName": "User name",
+      "ticket": "Ticket",
+      "reason": "Reason"
+    },
+    "logo": {
+      "cardTitle": "Logo upload",
+      "filedUpdate": "Failed to update logo",
+      "filedLogoProcess": "Failed to process image",
+      "successUpload": "Logo has been changed"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/v1/users/497f6eca-6276-4993-bfeb-53cbbbba6f08/connect?site=0b6b75f4-608b-44bb-a03a-2cd340c65d37&redirectUrlId=e0ccab0b-4696-431e-a80a-9da992f31b36",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Bearer eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIn0..ewRkmEff3GQym6BLEngEsA.mK0ZFEmxcEIwBHieyLfVhhY-O36ziwyv8FSXwaaZ1kT9Xa7m38hhcpAsr9nKl35zHIBxyhDrRVEq49tOuKP7I0scKjsT-3Msux-zLkEuXpeswYR4dD3p6C_dWbLcFtuYo4ir8oN7iNGglG8ujzNXPHIrdO-CuGbhCFU5VLsXB3uHSg3JzpcM9hf9k1HYqC6ajgjp8Ej4v5lCpURbckzNww.efPY1iGBQv9rov1VbSCLxEDJkrbFoFcVMj1gR_LB92w"
+      },
+      "Content-Type": {
+        "equalTo": "application/json"
+      },
+      "PSU-IP-Address": {
+        "equalTo": "127.0.0.1"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "redirect": {
+        "url": "https://yoltbank.sandbox.yolt.io/yoltbank/yolt-test-bank/authorize?redirect_uri=https://yts-credit-scoring-app:8080/yts-credit-scoring-app/callback&state=c0e3d239-f9c7-4de3-8fab-77c0d5042b40"
+      },
+      "userSiteId": "061ae378-f773-4625-9796-06e72e1e5a86"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

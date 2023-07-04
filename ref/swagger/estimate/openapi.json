@@ -1,0 +1,248 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "CreditEngineAPI",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Keepalive",
+        "operationId": "keepalive__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/credit-score": {
+      "post": {
+        "summary": "Score Raw Transactions",
+        "operationId": "score_raw_transactions_credit_score_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Transactions"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreditScoreResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CreditScoreResponse": {
+        "title": "CreditScoreResponse",
+        "required": [
+          "score",
+          "grade"
+        ],
+        "type": "object",
+        "properties": {
+          "score": {
+            "title": "Score",
+            "type": "integer"
+          },
+          "grade": {
+            "title": "Grade",
+            "type": "string"
+          }
+        }
+      },
+      "ErrorResponse": {
+        "title": "ErrorResponse",
+        "required": [
+          "code",
+          "message",
+          "innerErrors"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "title": "Code",
+            "type": "string"
+          },
+          "message": {
+            "title": "Message",
+            "type": "string"
+          },
+          "innerErrors": {
+            "title": "Innererrors",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InnerError"
+            }
+          }
+        }
+      },
+      "HTTPValidationError": {
+        "title": "HTTPValidationError",
+        "type": "object",
+        "properties": {
+          "detail": {
+            "title": "Detail",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            }
+          }
+        }
+      },
+      "InnerError": {
+        "title": "InnerError",
+        "required": [
+          "target",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "target": {
+            "title": "Target",
+            "type": "string"
+          },
+          "message": {
+            "title": "Message",
+            "type": "string"
+          }
+        }
+      },
+      "Transaction": {
+        "title": "Transaction",
+        "required": [
+          "id",
+          "amount",
+          "dateBooked"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "amount": {
+            "$ref": "#/components/schemas/Value"
+          },
+          "currencyCode": {
+            "title": "Currencycode",
+            "type": "string",
+            "const": "EUR"
+          },
+          "dateBooked": {
+            "title": "Datebooked",
+            "type": "string"
+          }
+        }
+      },
+      "Transactions": {
+        "title": "Transactions",
+        "required": [
+          "referenceId",
+          "currentBalance",
+          "transactions"
+        ],
+        "type": "object",
+        "properties": {
+          "referenceId": {
+            "title": "Referenceid",
+            "type": "string"
+          },
+          "currentBalance": {
+            "$ref": "#/components/schemas/Value"
+          },
+          "transactions": {
+            "title": "Transactions",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Transaction"
+            }
+          }
+        }
+      },
+      "ValidationError": {
+        "title": "ValidationError",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "loc": {
+            "title": "Location",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "msg": {
+            "title": "Message",
+            "type": "string"
+          },
+          "type": {
+            "title": "Error Type",
+            "type": "string"
+          }
+        }
+      },
+      "Value": {
+        "title": "Value",
+        "required": [
+          "unscaledValue",
+          "scale"
+        ],
+        "type": "object",
+        "properties": {
+          "unscaledValue": {
+            "title": "Unscaledvalue",
+            "type": "integer"
+          },
+          "scale": {
+            "title": "Scale",
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+Credit score invite
+Brought to you by Yolt.
+
+Dear [( ${userName} )],
+You have been invited to perform a creditworthiness check by Yolt.
+This creditworthiness check will be performed by Yolt on behalf of our Test Client.
+
+Start credit score: [( ${redirectUrl} )]
+
+ABOUT Yolt
+Yolt Technology Services is the leading open banking provider in Europe, building, managing, and maintaining AIS and PIS connections for top financial institutions and ambitious tech businesses.
+
+About Us: https://yolt.com/about-us

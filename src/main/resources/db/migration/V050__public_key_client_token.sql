@@ -1,0 +1,1 @@
+ALTER TABLE client_token ADD COLUMN signed_public_Key_id UUID NOT NULL;

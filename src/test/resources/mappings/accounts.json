@@ -1,0 +1,109 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/v1/users/497f6eca-6276-4993-bfeb-53cbbbba6f08/accounts",
+    "headers": {
+      "Authorization": {
+        "equalTo": "Bearer eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIn0..ewRkmEff3GQym6BLEngEsA.mK0ZFEmxcEIwBHieyLfVhhY-O36ziwyv8FSXwaaZ1kT9Xa7m38hhcpAsr9nKl35zHIBxyhDrRVEq49tOuKP7I0scKjsT-3Msux-zLkEuXpeswYR4dD3p6C_dWbLcFtuYo4ir8oN7iNGglG8ujzNXPHIrdO-CuGbhCFU5VLsXB3uHSg3JzpcM9hf9k1HYqC6ajgjp8Ej4v5lCpURbckzNww.efPY1iGBQv9rov1VbSCLxEDJkrbFoFcVMj1gR_LB92w"
+      },
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": [
+      {
+        "id": "109d740d-2932-4916-a62d-22e363e34dc1",
+        "accountHolder": "Account Holder",
+        "externalId": "NL05INGB1234567890",
+        "type": "CREDIT_CARD",
+        "userSite": {
+          "userSiteId": "43c3e7cc-ac8d-4bb0-b0bf-9b280e108805",
+          "siteId": "33aca8b9-281a-4259-8492-1b37706af6db"
+        },
+        "currency": "EUR",
+        "balance": 652.29,
+        "status": "ENABLED",
+        "name": "Account NL05INGB1234567890",
+        "accountReferences": {
+          "iban": "NL05INGB1234567890",
+          "bban": "05INGB1234567890",
+          "sortCodeAccountNumber": "1304798728",
+          "maskedPan": "1234 **** **** 5678"
+        },
+        "creditCardAccount": {
+          "availableCredit": 999,
+          "creditLimit": 5000.05
+        },
+        "usage": "PRIVATE",
+        "lastDataFetchTime": "2020-12-21T08:57:52.429Z",
+        "balances": [
+          {
+            "currency": "EUR",
+            "amount": 652.29,
+            "type": "AVAILABLE"
+          }
+        ]
+      },
+      {
+        "id": "bc619bf9-d6f1-4f36-89b6-94af20dc0817",
+        "externalId": "NL33INGB1234567890",
+        "type": "CURRENT_ACCOUNT",
+        "userSite": {
+          "userSiteId": "43c3e7cc-ac8d-4bb0-b0bf-9b280e108805",
+          "siteId": "33aca8b9-281a-4259-8492-1b37706af6db"
+        },
+        "currency": "EUR",
+        "balance": 59186.01,
+        "status": "ENABLED",
+        "name": "Account NL33INGB1234567890",
+        "accountReferences": {
+          "iban": "NL33INGB1234567890"
+        },
+        "currentAccount": {
+          "creditLimit": -2000.02
+        },
+        "usage": "PRIVATE",
+        "lastDataFetchTime": "2020-12-21T08:57:52.429Z",
+        "balances": [
+          {
+            "currency": "EUR",
+            "amount": 59186.01,
+            "type": "AVAILABLE"
+          }
+        ]
+      },
+      {
+        "id": "eec331b3-ec4b-44e9-8749-209c111b0d82",
+        "externalId": "NL75INGB1234567890",
+        "type": "SAVINGS_ACCOUNT",
+        "userSite": {
+          "userSiteId": "43c3e7cc-ac8d-4bb0-b0bf-9b280e108805",
+          "siteId": "33aca8b9-281a-4259-8492-1b37706af6db"
+        },
+        "currency": "EUR",
+        "balance": "0.00",
+        "status": "ENABLED",
+        "name": "Account NL75INGB1234567890",
+        "accountReferences": {
+          "iban": "NL75INGB1234567890"
+        },
+        "savingsAccount": {},
+        "usage": "PRIVATE",
+        "lastDataFetchTime": "2020-12-21T08:57:52.429Z",
+        "balances": [
+          {
+            "currency": "EUR",
+            "amount": "0.00",
+            "type": "AVAILABLE"
+          }
+        ]
+      }
+    ],
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+environment: test
+spring:
+  main:
+    banner-mode: "off"
+    allow-bean-definition-overriding: true
+  datasource:
+    username: runner
+    password: runner
+    url: jdbc:postgresql://127.0.0.1:5432/integration-test-db
+  flyway:
+    locations: classpath:/db/migration,classpath:/db/testdata
+  security:
+    oauth2:
+      client:
+        provider:
+          microsoft:
+            authorization-uri: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+            token-uri: https://login.microsoftonline.com/common/oauth2/v2.0/token
+            user-info-uri: https://graph.microsoft.com/oidc/userinfo
+            jwk-set-uri: https://login.microsoftonline.com/common/discovery/v2.0/keys
+            user-name-attribute: sub
+        registration:
+          github:
+            clientId: "*"
+            clientSecret: "*"
+            redirectUri: "{baseUrl}/api/admin/oauth2/callback/{registrationId}"
+          google:
+            clientId: "*"
+            clientSecret: "*"
+            redirectUri: "{baseUrl}/admin/oauth2/callback/{registrationId}"
+          microsoft:
+            clientId: "*"
+            clientSecret: "*"
+            redirectUri: "{baseUrl}/admin/oauth2/callback/{registrationId}"
+            authorization-grant-type: authorization_code
+            scope:
+              - openid
+              - profile
+              - email
+  sleuth:
+    baggage:
+      correlation-fields:
+        # Keep in sync with local-fields
+        # credit scoring app is positioned outside yolt, and request go through the client-gateway. Therefore, this is not propagated to the rest of yolt.
+        # However, it does use sleuth as well.
+        - client-id  # The credit scoring app client Id. Is static for the credit scoring app instance.
+        - app-client-id # The client that is using credit scoring app. This is a 'client-id' only known in credit scoring app.
+        - client-user-id # The client-user-id. This is the identifier of the 'yolt user'.
+        - app-user-id # The user-id. This is the identifier that belongs to a user, that is only known inside the credit scoring app.
+        - user_site_id # The user site id. A Yolt identifier.
+        - request_trace_id # a request_trace_id that will be sent to the yolt backend as headers, so we can correlate request.
+      local-fields: # Fields are propagated locally. The client-gateway does not propagate these fields.
+        - client-id
+        - app-client-id
+        - client-user-id
+        - app-user-id
+        - user_site_id
+        - request_trace_id
+credit-scoring:
+  amazon-ses:
+    enabled: false
+  trust-store-location: certificates/fake-keystore.p12
+  trust-store-password: changeit
+
+yolt:
+  deployment:
+    namespace: ycs
+    cluster: "0"
+    environment: "test"
+  vault:
+    enabled: false
+    address: https://my-personal-vault.yolt.io
+    auth:
+      service-account-token-file: src/test/resources/test-vault-token.txt
+    secret:
+      enabled: true
+      location: classpath:secrets
+  commons:
+    error-handling:
+      prefix: CSA
+  yolt-api:
+    vault-enabled: false
+    proxy-enabled: false
+    jvm-truststore: false
+    base-url: https://localhost:${wiremock.server.https-port}/
+    client-id: a55c670c-4d9a-4f27-ac15-57d170b8668b
+    request-token-public-key-id: 8c9df6c6-b918-4fbe-9c1c-75d75bd28b9b
+    redirect-url-id: e0ccab0b-4696-431e-a80a-9da992f31b36
+    mtls:
+      enabled: true
+    one-off-ais-user: true
+  estimate-api:
+    base-url: https://localhost:${wiremock.server.https-port}/
+    proxy-enabled: false
+  stubs:
+    base-url: http://localhost:${wiremock.server.port}/
+
+isp:
+  proxy:
+    host: dummy
+    port: 0
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: info, health, metrics, prometheus

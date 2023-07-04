@@ -1,0 +1,11 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: yts-credit-scoring-app-pod-disruption-budget
+  labels:
+    name: yts-credit-scoring-app
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      name: yts-credit-scoring-app

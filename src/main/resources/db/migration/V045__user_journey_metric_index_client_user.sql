@@ -1,0 +1,1 @@
+create index user_journey_metric_client_id_user_id_idx ON user_journey_metric (client_id, user_id);

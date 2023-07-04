@@ -1,0 +1,93 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/v2/sites?tag=NL",
+    "headers": {}
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": [
+      {
+        "availableInCountries": [
+          "AT"
+        ],
+        "connectionType": "DIRECT_CONNECTION",
+        "enabled": true,
+        "groupingBy": "string",
+        "health": {
+          "healthStatus": "DOWN",
+          "manualMaintenanceFrom": "2019-08-24T14:15:22Z",
+          "manualMaintenanceStatus": "MAINTENANCE",
+          "manualMaintenanceTo": "2019-08-24T14:15:22Z",
+          "successRatioForCreateOrUpdate": "string",
+          "successRatioRefresh": "string"
+        },
+        "iconLink": "/content/images/sites/icons/96da1236-1bf7-45e0-b87d-1fd8e264255b.png",
+        "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+        "loginType": "FORM",
+        "name": "Credit Agricole",
+        "noLongerSupported": true,
+        "services": {
+          "ais": {
+            "hasFormSteps": true,
+            "hasRedirectSteps": true,
+            "onboarded": {
+              "client": true,
+              "redirectUrlIds": [
+                "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+              ]
+            }
+          }
+        },
+        "supportedAccountTypes": [
+          "CREDIT_CARD"
+        ],
+        "tags": [
+          "string"
+        ]
+      },
+      {
+        "availableInCountries": [
+          "NL"
+        ],
+        "connectionType": "DIRECT_CONNECTION",
+        "enabled": true,
+        "groupingBy": "string",
+        "health": {
+          "healthStatus": "DOWN",
+          "manualMaintenanceFrom": "2019-08-24T14:15:22Z",
+          "manualMaintenanceStatus": "MAINTENANCE",
+          "manualMaintenanceTo": "2019-08-24T14:15:22Z",
+          "successRatioForCreateOrUpdate": "string",
+          "successRatioRefresh": "string"
+        },
+        "iconLink": "/content/images/sites/icons/96da1236-1bf7-45e0-b87d-1fd8e264255b.png",
+        "id": "a2d82da0-9bea-4f55-bd4e-88bd5e919d76",
+        "loginType": "FORM",
+        "name": "ABM Amro",
+        "noLongerSupported": true,
+        "services": {
+          "ais": {
+            "hasFormSteps": true,
+            "hasRedirectSteps": true,
+            "onboarded": {
+              "client": true,
+              "redirectUrlIds": [
+                "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+              ]
+            }
+          }
+        },
+        "supportedAccountTypes": [
+          "CREDIT_CARD"
+        ],
+        "tags": [
+          "string"
+        ]
+      }
+    ],
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

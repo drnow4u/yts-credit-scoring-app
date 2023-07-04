@@ -1,0 +1,2 @@
+ALTER TABLE credit_score_monthly_report ADD COLUMN incoming_transactions_size INTEGER;
+ALTER TABLE credit_score_monthly_report ADD COLUMN outgoing_transactions_size INTEGER;
