@@ -8,7 +8,7 @@
     <parent>
         <groupId>nl.ing.lovebird</groupId>
         <artifactId>lovebird-commons</artifactId>
-        <version>14.0.11</version>
+        <version>14.0.15-SNAPSHOT</version>
         <relativePath/>
     </parent>
 
